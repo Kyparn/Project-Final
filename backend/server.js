@@ -55,8 +55,8 @@ app.post('/register', async (req, res) => {
         success: false,
       })
     } else {
-      console.log(password)
-      console.log(username)
+      // console.log(password)
+      // console.log(username)
       const newUser = await new User({
         username: username,
         password: bcrypt.hashSync(password, salt),
@@ -115,16 +115,10 @@ const authenticateUser = async (req, res, next) => {
     if (user) {
       next()
     } else {
-      res.status(401).json({
-        response: 'login plz',
-        success: false,
-      })
+      res.status(401).json({ success: false, message: 'Not authorized' })
     }
   } catch (error) {
-    res.status(400).json({
-      response: error,
-      success: false,
-    })
+    res.status(400).json({ success: false, message: 'Invalid request', error })
   }
 }
 
@@ -141,17 +135,17 @@ const SiteInfo = mongoose.model('SiteInfo', {
   visibility: String,
 })
 
-if (process.env.RESET_DB) {
-  const seedDatabase = async () => {
-    await SiteInfo.deleteMany()
-    diveData.forEach((siteinfo) => {
-      const newSiteInfo = new SiteInfo(siteinfo)
-      newSiteInfo.save()
-    })
-  }
+// if (process.env.RESET_DB) {
+//   const seedDatabase = async () => {
+//     await SiteInfo.deleteMany()
+//     diveData.forEach((siteinfo) => {
+//       const newSiteInfo = new SiteInfo(siteinfo)
+//       newSiteInfo.save()
+//     })
+//   }
 
-  seedDatabase()
-}
+//   seedDatabase()
+// }
 
 //Showing all ENDPOINTS
 
@@ -161,9 +155,17 @@ app.get('/', (req, res) => {
 
 // Showing all DIVE INFO
 app.get('/myData', async (req, res) => {
-  const mySiteInfo = await SiteInfo.find()
-  res.json(mySiteInfo)
+  try {
+    if (!diveData) {
+      res.status(404).send('No data to show')
+    } else {
+      res.json(diveData)
+    }
+  } catch (error) {
+    res.status(400).json({ error: 'Not found' })
+  }
 })
+
 // // So u can search by ID
 // app.get('/myNetflix/shows/:show_id', (req, res) => {
 //   const id = req.params.show_id

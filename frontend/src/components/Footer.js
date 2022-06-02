@@ -2,8 +2,8 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>
-      <h1>Made by Simon Student @ Technigo</h1>
+    <div className="footer">
+      <p>Made by Simon Student @ Technigo</p>
     </div>
   )
 }

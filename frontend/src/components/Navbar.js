@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="nav">
       <Link to="/" className="site-title">
-        Vars är ölen?
+        Vars är 🍺 ?
       </Link>
       <ul>
         <li>

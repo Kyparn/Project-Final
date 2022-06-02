@@ -1,4 +1,4 @@
-import { API } from '../utils/api'
+import { API } from '../../utils/api'
 import React from 'react'
 
 const Phiphi = () => {
@@ -8,3 +8,4 @@ const Phiphi = () => {
     </div>
   )
 }
+export default Phiphi

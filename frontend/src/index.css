@@ -40,6 +40,7 @@ object-fit: cover;
   align-items: center;
   gap:2rem;
   padding:0 2rem;
+
 }
 .nav ul{
   padding:0;

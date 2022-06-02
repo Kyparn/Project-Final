@@ -8,7 +8,9 @@ import bodyParser from 'body-parser'
 
 import diveData from './data/info.json'
 
-const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/backend'
+const mongoUrl =
+  process.env.MONGO_URL ||
+  'mongodb+srv://SuperSimon:SallyLykke@cluster0.qcnnx.mongodb.net/?retryWrites=true&w=majority'
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise
 
@@ -26,8 +28,6 @@ const UserSchema = new mongoose.Schema({
     required: true,
     unique: true,
     trim: true,
-    minlenght: 5,
-    maxlenght: 20,
   },
   password: {
     type: String,

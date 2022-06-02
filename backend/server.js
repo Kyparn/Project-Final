@@ -8,9 +8,7 @@ import bodyParser from 'body-parser'
 
 import diveData from './data/info.json'
 
-const mongoUrl =
-  process.env.MONGO_URL ||
-  'mongodb+srv://SuperSimon:SallyLykke@cluster0.qcnnx.mongodb.net/?retryWrites=true&w=majority'
+const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/backend'
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
 mongoose.Promise = Promise
 

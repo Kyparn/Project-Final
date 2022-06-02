@@ -25,6 +25,9 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
+    trim: true,
+    minlenght: 5,
+    maxlenght: 20,
   },
   password: {
     type: String,
@@ -36,9 +39,10 @@ const UserSchema = new mongoose.Schema({
   },
 })
 
+// makeing a new USER
+
 const User = mongoose.model('User', UserSchema)
 
-// Registration endpoint
 app.post('/register', async (req, res) => {
   const { username, password } = req.body
 
@@ -74,6 +78,8 @@ app.post('/register', async (req, res) => {
   }
 })
 
+// User LOGIN
+
 app.post('/login', async (req, res) => {
   const { username, password } = req.body
   try {
@@ -88,7 +94,7 @@ app.post('/login', async (req, res) => {
       })
     } else {
       res.status(400).json({
-        response: "username and password don't match",
+        response: 'Password don´t',
         success: false,
       })
     }
@@ -99,6 +105,8 @@ app.post('/login', async (req, res) => {
     })
   }
 })
+
+//checking for AUTHENTICATION
 
 const authenticateUser = async (req, res, next) => {
   const accessToken = req.header('Authorization')
@@ -119,6 +127,8 @@ const authenticateUser = async (req, res, next) => {
     })
   }
 }
+
+//SiteINFO
 
 const SiteInfo = mongoose.model('SiteInfo', {
   diveId: Number,
@@ -143,7 +153,8 @@ if (process.env.RESET_DB) {
   seedDatabase()
 }
 
-// Landing
+//Showing all ENDPOINTS
+
 app.get('/', (req, res) => {
   res.send(listEndpoints(app))
 })

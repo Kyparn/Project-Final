@@ -1,6 +1,7 @@
 [
   {
     "diveId": 1,
+    "img":"https://i.imgur.com/bBb1YRQ.jpg",
     "name": "Koh Haa",
     "location": "Sothern Thailand",
     "deapth": "from 1 to 50 meter",
@@ -12,6 +13,7 @@
   },
   {
     "diveId": 2,
+    "img":"https://i.imgur.com/ZGBkR5x.jpg",
     "name": "Bida Islands",
     "location": "Sothern Thailand",
     "deapth": "from 1 to 30 meter",
@@ -23,6 +25,7 @@
   },
   {
     "diveId": 3,
+    "img":"https://i.imgur.com/q8yJmjk.jpg",
     "name": "Koh Phi Phi",
     "location": "Sothern Thailand",
     "deapth": "from 5 to 30 meter",
@@ -34,6 +37,7 @@
   } ,
    {
     "diveId": 4,
+    "img":"https://i.imgur.com/0EA5bzE.jpg",
     "name": "Hin Daeng and Hin Muang",
     "location": "Sothern Thailand",
     "deapth": "from 10 to 60 meter",
@@ -45,6 +49,7 @@
   },
   {
     "diveId": 5,
+    "img":"https://i.imgur.com/hiBAUYG.jpg",
     "name": "Anemone Reef, Shark Point & KC Wreck",
     "location": "Sothern Thailand",
     "deapth": "from 1 to 30 meter",

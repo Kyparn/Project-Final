@@ -135,17 +135,17 @@ const SiteInfo = mongoose.model('SiteInfo', {
   visibility: String,
 })
 
-// if (process.env.RESET_DB) {
-//   const seedDatabase = async () => {
-//     await SiteInfo.deleteMany()
-//     diveData.forEach((siteinfo) => {
-//       const newSiteInfo = new SiteInfo(siteinfo)
-//       newSiteInfo.save()
-//     })
-//   }
+if (process.env.RESET_DB) {
+  const seedDatabase = async () => {
+    await SiteInfo.deleteMany()
+    diveData.forEach((siteinfo) => {
+      const newSiteInfo = new SiteInfo(siteinfo)
+      newSiteInfo.save()
+    })
+  }
 
-//   seedDatabase()
-// }
+  seedDatabase()
+}
 
 //Showing all ENDPOINTS
 
@@ -165,34 +165,6 @@ app.get('/myData', async (req, res) => {
     res.status(400).json({ error: 'Not found' })
   }
 })
-
-// // So u can search by ID
-// app.get('/myNetflix/shows/:show_id', (req, res) => {
-//   const id = req.params.show_id
-//   Stream.find({ show_id: id })
-//     .then((results) => {
-//       res.json(results)
-//     })
-//     .catch((err) => {
-//       res.json({ message: 'Cant find query', err: err })
-//     })
-// })
-// // Get route with title
-// app.get('/myNetflix/title/:title', async (req, res) => {
-//   const singleTitle = await Stream.findOne({
-//     title: req.params.title,
-//   })
-//   res.send(singleTitle)
-// })
-
-// //Geting route with year
-
-// app.get('/myNetflix/year/:release_year', async (req, res) => {
-//   const relaseDate = await Stream.find({
-//     release_year: req.params.release_year,
-//   })
-//   res.send(relaseDate)
-// })
 
 // Start the server
 app.listen(port, () => {

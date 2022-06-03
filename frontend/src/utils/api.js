@@ -1,1 +1,1 @@
-export const API = `http://localhost:8080/myData`
+export const API = `https://final-project-simon.herokuapp.com/myData`

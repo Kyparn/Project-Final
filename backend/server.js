@@ -53,8 +53,6 @@ app.post('/register', async (req, res) => {
         success: false,
       })
     } else {
-      // console.log(password)
-      // console.log(username)
       const newUser = await new User({
         username: username,
         password: bcrypt.hashSync(password, salt),
@@ -152,7 +150,7 @@ app.get('/', (req, res) => {
 })
 
 // Showing all DIVE INFO
-app.get('/myData', async (req, res) => {
+app.get('/myData', (req, res) => {
   try {
     if (!diveData) {
       res.status(404).send('No data to show')
@@ -164,6 +162,21 @@ app.get('/myData', async (req, res) => {
   }
 })
 
+app.get('/myData/dive/:slug', (req, res) => {
+  try {
+    const divedata = diveData.find(({ slug }) => req.params.slug === slug)
+    if (divedata) {
+      res.status(200).json({
+        response: divedata,
+        success: true,
+      })
+    } else {
+      res.status(404).json({ response: error, success: false })
+    }
+  } catch (error) {
+    res.status(400).json({ response: error, success: false })
+  }
+})
 // Start the server
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`)

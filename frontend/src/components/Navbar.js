@@ -15,9 +15,8 @@ const Navbar = () => {
         console.log(data)
         if (data) {
           setDives(data)
-          // } else {
-          //   setHasError(true)
-          //
+        } else {
+          setHasError(true)
         }
       })
     // hämta dives
@@ -26,7 +25,7 @@ const Navbar = () => {
   return (
     <nav className="nav">
       <Link to="/" className="site-title">
-        <p>My bubbels 🐟 </p>
+        <p className="title">My bubbels 🐟 </p>
       </Link>
       <ul>
         {dives.map((dive) => (
@@ -38,7 +37,7 @@ const Navbar = () => {
           <Link to="/blogg">Blogg</Link>
         </li>
         <li>
-          <Link to="/Login">Login</Link>
+          <Link to="/login">Login</Link>
         </li>
       </ul>
     </nav>

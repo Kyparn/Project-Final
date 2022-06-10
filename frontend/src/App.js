@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from 'components/Navbar'
 import Main from 'components/Main'
-// import Blogg from 'components/pages/Blogg'
+import Blogg from 'components/Blogg/Blogg'
 // import Login from 'components/pages/Login'
 import DiveDetails from 'components/pages/DiveDetails'
 import Footer from 'components/Footer'
@@ -26,7 +26,7 @@ export const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Main />}></Route>
-          {/* <Route path="/blogg" element={<Blogg />}></Route> */}
+          <Route path="/blogg" element={<Blogg />}></Route>
           {/* <Route path="/login" element={<Login />}></Route> */}
           <Route path="/:slug" element={<DiveDetails />}></Route>
           <Route path="/*" element={<NotFound />}></Route>

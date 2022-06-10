@@ -23,13 +23,15 @@ const DiveDetails = () => {
     // hämta dive med slug dvs API-adressen + /${}
     // setDives(response)
   }, [slug])
-  if (loading) return null
+  if (loading) {
+    return <h1>Loading...</h1>
+  }
   return (
     <div className="main-container">
       <Link to="/" className="back-link">
         <span className="movie-icon">Back</span>
       </Link>
-      <div className="info" key={dive.name}>
+      <div className="info">
         <h2>{dive.level}</h2>
         <h2>{}</h2>
         <h2>{}</h2>

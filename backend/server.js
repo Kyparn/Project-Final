@@ -20,6 +20,16 @@ app.use(cors())
 app.use(express.json())
 app.use(bodyParser.json())
 
+app.use((req, res, next) => {
+  if (mongoose.connection.readyState === 1) {
+    next()
+  } else {
+    res.status(503).json({ error: 'Service not online' })
+  }
+})
+
+// makeing a new USER
+
 const UserSchema = new mongoose.Schema({
   username: {
     type: String,
@@ -36,8 +46,6 @@ const UserSchema = new mongoose.Schema({
     default: () => crypto.randomBytes(128).toString('hex'),
   },
 })
-
-// makeing a new USER
 
 const User = mongoose.model('User', UserSchema)
 
@@ -118,7 +126,56 @@ const authenticateUser = async (req, res, next) => {
   }
 }
 
-//SiteINFO
+// Info for my posts
+
+const BloggSchema = new mongoose.Schema({
+  message: {
+    type: String,
+    minlength: 5,
+    maxlength: 140,
+    required: true,
+  },
+  hearts: {
+    type: Number,
+    default: 0,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+})
+
+const Blogg = mongoose.model('Blogg', BloggSchema)
+
+app.get('/blogg', async (req, res) => {
+  const blogg = await Blogg.find().sort({ createAt: 'desc' }).limit(20).exec()
+  res.json(blogg)
+})
+app.post('/blogg', async (req, res) => {
+  const { message } = req.body
+
+  try {
+    const newBlogg = await new Blogg({ message }).save()
+    res.status(200).json({ respone: newBlogg, success: true })
+  } catch (error) {
+    res.status(400).json({ respone: error, success: false })
+  }
+})
+app.post('/blogg/:bloggId/like', async (req, res) => {
+  const { bloggId } = req.params
+  try {
+    const updatedBlogg = await Blogg.findByIdAndUpdate(
+      bloggId,
+      { $inc: { hearts: 1 } },
+      { new: true },
+    )
+    res.status(200).json({ respone: updatedBlogg, success: true })
+  } catch (error) {
+    res.status(400).json({ respone: error, success: false })
+  }
+})
+
+//SiteINFO for my frontend
 
 const SiteInfo = mongoose.model('SiteInfo', {
   diveId: Number,

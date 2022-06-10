@@ -5,7 +5,7 @@ const DiveDetails = () => {
   const { slug } = useParams()
   const [dive, setDive] = useState()
   const [hasError, setHasError] = useState(false)
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
     setLoading(true)
     fetch(`https://final-project-simon.herokuapp.com/myData/dive/${slug}`)
@@ -22,15 +22,15 @@ const DiveDetails = () => {
       .finally(() => setLoading(false))
     // hämta dive med slug dvs API-adressen + /${}
     // setDives(response)
-  }, [])
+  }, [slug])
+  if (loading) return null
   return (
     <div className="main-container">
       <Link to="/" className="back-link">
         <span className="movie-icon">Back</span>
       </Link>
-      <div className="info">
-        <h2>{}</h2>
-        <h2>{}</h2>
+      <div className="info" key={dive.name}>
+        <h2>{dive.level}</h2>
         <h2>{}</h2>
         <h2>{}</h2>
         <h2>{}</h2>

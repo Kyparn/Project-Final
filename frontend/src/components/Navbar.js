@@ -27,7 +27,7 @@ const Navbar = () => {
       <Link to="/" className="site-title">
         <p className="title"> 🦈</p>
       </Link>
-      <ul>
+      <ul className="links">
         {dives.map((dive) => (
           <li>
             <Link to={dive.slug}>{dive.name}</Link>

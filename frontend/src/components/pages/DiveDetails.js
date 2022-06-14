@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { Backicon } from '../Backicon'
 
 const DiveDetails = () => {
   const { slug } = useParams()
@@ -29,7 +30,7 @@ const DiveDetails = () => {
   return (
     <div className="main-container">
       <Link to="/" className="backLink">
-        <span className="backIcon">Back</span>
+        <Backicon /> Main ApP
       </Link>
       <div className="info">
         <h2 className="infoName">{dive.name}</h2>

@@ -19,8 +19,6 @@ code {
 }
 .site-title{
   font-size: 2rem;
- 
-
 }
 .header{
   text-align: center;
@@ -91,22 +89,31 @@ object-fit: cover;
   padding:10px
 }
 .info{
-  gap: 1rem;
-  display: flex;
-  padding: 10px;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:1em;
+  padding:1em;
+  
+}
+
+.infoName{
+
+}
+.main-container{
+
+}
+.infoSite{
+
+}.infoLevel{
+
+}.infoLife{
+
 }
 .images{
   border-radius: 1em;
   box-shadow: 1px 1px 5px black;
 }
-
-
-
-
-
 /* Tablet
 
 @media screen and (min-width: 768px) {}

@@ -6,9 +6,7 @@ const Main = () => {
     <div className="main">
       <div className="overlay">
         <video src={video} autoPlay loop muted />
-        <div className="content">
-          <p>Hej hej Simon</p>
-        </div>
+        <div className="content">{/* <p>Hej hej Simon</p> */}</div>
       </div>
     </div>
   )

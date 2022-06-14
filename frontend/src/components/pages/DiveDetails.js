@@ -13,7 +13,7 @@ const DiveDetails = () => {
       .then((data) => {
         if (data) {
           console.log(data)
-          setDive(data)
+          setDive(data.response)
         } else {
           setHasError(true)
         }
@@ -28,14 +28,18 @@ const DiveDetails = () => {
   }
   return (
     <div className="main-container">
-      <Link to="/" className="back-link">
-        <span className="movie-icon">Back</span>
+      <Link to="/" className="backLink">
+        <span className="backIcon">Back</span>
       </Link>
       <div className="info">
-        <h2>{dive.level}</h2>
-        <h2>{}</h2>
-        <h2>{}</h2>
-        <h2>{}</h2>
+        <h2 className="infoName">{dive.name}</h2>
+        <h2 className="infoSite">{dive.info}</h2>
+        <h2 className="infoLevel">
+          Nivå på för dykare {''}
+          {dive.level}
+        </h2>
+        <h2 className="infoLife">{dive.marineLife}</h2>
+        <img className="images" src={dive.img} width="450px" />
         <h2>{}</h2>
       </div>
     </div>

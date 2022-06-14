@@ -25,7 +25,7 @@ const Navbar = () => {
   return (
     <nav className="nav">
       <Link to="/" className="site-title">
-        <p className="title">My bubbels 🐟 </p>
+        <p className="title"> 🦈</p>
       </Link>
       <ul>
         {dives.map((dive) => (
@@ -33,12 +33,12 @@ const Navbar = () => {
             <Link to={dive.slug}>{dive.name}</Link>
           </li>
         ))}
-        <li>
+        {/* <li>
           <Link to="/blogg">Blogg</Link>
         </li>
         <li>
           <Link to="/login">Login</Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   )

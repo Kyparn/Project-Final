@@ -3,7 +3,7 @@ import moment from 'moment'
 
 const BloggCard = ({ blogg, handleAddedLikes }) => {
   return (
-    <section className="post-container" key={blogg._id}>
+    <section className="post-container">
       <div className="message-text">
         <p className="text-blogg">{blogg.message}</p>
         <div className="beer-container">

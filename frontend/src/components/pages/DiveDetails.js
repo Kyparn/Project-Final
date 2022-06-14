@@ -30,7 +30,7 @@ const DiveDetails = () => {
   return (
     <div className="main-container">
       <Link to="/" className="backLink">
-        <Backicon /> Main ApP
+        <Backicon /> Back to main
       </Link>
       <div className="info">
         <h2 className="infoName">{dive.name}</h2>

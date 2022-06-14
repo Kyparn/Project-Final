@@ -11,11 +11,14 @@ const Blogg = () => {
   useEffect(() => {
     setLoading(true)
     fetchBlogg()
-  })
+  }, [])
   const fetchBlogg = () => {
     fetch(BLOGG_URL)
       .then((res) => res.json())
-      .then((data) => setBlogg(data))
+      .then((data) => {
+        setBlogg(data)
+        setLoading(false)
+      })
   }
   const handleAddedLikes = (id) => {
     const options = {
@@ -34,11 +37,10 @@ const Blogg = () => {
     <>
       <Form setBlogg={setBlogg} blogg={blogg} />
       {blogg.map((blogg) => (
-        <BloggCard
-          key={blogg._id}
-          blogg={blogg}
-          handleAddedLikes={handleAddedLikes}
-        />
+        <div key={blogg._id}>
+          {' '}
+          <BloggCard blogg={blogg} handleAddedLikes={handleAddedLikes} />
+        </div>
       ))}
     </>
   )

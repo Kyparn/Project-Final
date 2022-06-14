@@ -94,25 +94,77 @@ object-fit: cover;
   grid-template-columns: repeat(2, 1fr);
   gap:1em;
   padding:1em;
-  
+
 }
 
 .infoName{
-
+padding:1px;
 }
 .main-container{
-
+  padding:1px;
 }
 .infoSite{
-
+  padding:1px;
 }.infoLevel{
-
+  padding:1px;
 }.infoLife{
-
+  padding:1px;
 }
 .images{
   border-radius: 1em;
   box-shadow: 1px 1px 5px black;
+}
+textarea {
+  border: 1px solid #000;
+  padding-top: 1em;
+  padding-left: 1em;
+  margin: 0;
+  min-width: 90%;
+  max-width: 90%;
+  min-height: 1em;
+}
+.blogg-container{
+  box-shadow: 1px 2px 2px 3px black;
+  background-color: #e3e2e2;
+  border: 1px solid #000;
+  padding: 1em;
+  max-width: 600px;
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.blogg-container-lowerpart{
+  padding: 1px;
+  display: flex;
+  flex-direction: column;
+
+}
+.happy-button{
+  padding:1px;
+}
+.post-container{
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 1em;
+  max-width: 600px;
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  box-shadow: 6px 6px 1px 1px rgb(5 5 5 / 90%);
+}
+.message-text{
+  padding:1px;
+}
+.text-blogg{
+  padding:1px;
+}
+.beer-container{
+  padding:1px;
+}
+.time{
+  padding:1px;
 }
 /* Tablet
 

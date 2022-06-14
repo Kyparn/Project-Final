@@ -6,17 +6,17 @@ import BloggCard from './BloggCard'
 
 const Blogg = () => {
   const [blogg, setBlogg] = useState([])
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
+    setLoading(true)
     fetchBlogg()
   })
-
   const fetchBlogg = () => {
     fetch(BLOGG_URL)
       .then((res) => res.json())
       .then((data) => setBlogg(data))
   }
-
   const handleAddedLikes = (id) => {
     const options = {
       method: 'post',
@@ -27,7 +27,9 @@ const Blogg = () => {
         fetchBlogg()
       })
   }
-
+  if (loading) {
+    return <h1>Loading...</h1>
+  }
   return (
     <>
       <Form setBlogg={setBlogg} blogg={blogg} />

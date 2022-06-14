@@ -34,10 +34,7 @@ const DiveDetails = () => {
       <div className="info">
         <h2 className="infoName">{dive.name}</h2>
         <h2 className="infoSite">{dive.info}</h2>
-        <h2 className="infoLevel">
-          Nivå på för dykare {''}
-          {dive.level}
-        </h2>
+        <h2 className="infoLevel">{dive.level}</h2>
         <h2 className="infoLife">{dive.marineLife}</h2>
         <img className="images" src={dive.img} width="450px" />
         <h2>{}</h2>

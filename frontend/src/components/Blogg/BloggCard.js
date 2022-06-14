@@ -3,21 +3,24 @@ import moment from 'moment'
 
 const BloggCard = ({ blogg, handleAddedLikes }) => {
   return (
-    <section className="blogg-container" key={blogg._id}>
+    <section className="post-container" key={blogg._id}>
       <div className="message-text">
-        <p className="text-blogg">{blogg.message} </p>
-        <div className="likes-container">
+        <p className="text-blogg">{blogg.message}</p>
+        <div className="beer-container">
           <div>
             <button
-              className="icons"
+              className="beers"
               onClick={() => handleAddedLikes(blogg._id)}
             >
-              {' '}
-              <span role="img" aria-label="hearts">
-                ❤️
-              </span>{' '}
-            </button>{' '}
-            {'X'} {blogg.hearts}{' '}
+              {''}
+              <span role="img" aria-label="beers">
+                🍺
+              </span>
+              {''}
+            </button>
+            {''}
+            {'X'} {blogg.beers}
+            {''}
           </div>
           <p className="time">{moment(blogg.createdAt).fromNow()}-</p>
         </div>

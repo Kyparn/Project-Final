@@ -98,12 +98,19 @@ object-fit: cover;
   flex-wrap: wrap;
   align-items: flex-start;
 }
+.images{
+  border-radius: 1em;
+  box-shadow: 1px 1px 5px black;
+}
 
 
-/* Tablet */
+
+
+
+/* Tablet
 
 @media screen and (min-width: 768px) {}
 
-/* BigScreen */
+/* BigScreen 
 
-@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1200px) {} */

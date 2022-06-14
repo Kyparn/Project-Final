@@ -33,10 +33,10 @@ const Navbar = () => {
             <Link to={dive.slug}>{dive.name}</Link>
           </li>
         ))}
-        {/* <li>
+        <li>
           <Link to="/blogg">Blogg</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/login">Login</Link>
         </li> */}
       </ul>

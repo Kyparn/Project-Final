@@ -42,16 +42,16 @@ const Form = ({ blogg, setBlogg }) => {
           <button
             className="happy-button"
             type="submit"
-            disabled={newBlogg.length < 6 || newBlogg.length > 140}
+            disabled={newBlogg.length < 2 || newBlogg.length > 140}
           >
             {''}
-            <span role="img" aria-label="beers">
+            {/* <span role="img" aria-label="beers">
               🍺{' '}
-            </span>
+            </span> */}
             Buy me beer {''}
-            <span role="img" aria-label="beers">
+            {/* <span role="img" aria-label="beers">
               🍺{' '}
-            </span>
+            </span> */}
           </button>
         </div>
       </form>

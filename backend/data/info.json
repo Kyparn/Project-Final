@@ -4,15 +4,9 @@
     "img":"https://i.imgur.com/bBb1YRQ.jpg",
     "name": "Koh Haa",
     "location": "Sothern Thailand",
-    "deapth": {
-      "min":1,
-      "max":50
-    },
-    "visibility":{
-      "min": 10,
-      "max":35
-    },
-    "level": "beginner to expert",
+    "deapth": "1 - 50 meter",
+    "visibility":"10 - 35 meter",
+    "level": " beginner to expert",
     "info":" Koh Haa marine park, consists of 6 islands. Because these islands are uninhabited, the visibility is usually around 20 m. These steep rock formations plunge into the water until a depth of 35 meters, at the deepest parts. Therefore divers of all levels can find great dive sites here. The islands have some stunning scenery, above and under water. A sheer blue laguna next to a white sand beach and giant rocks.",
     "marineLife":
       "Barracudas, Ghostpipe, Turtles, Porcupine and Puffer Fish, Harlequin Shrimps, Sea moths and Nudibrands, Scorpionfish and Lionfish sometimes also Whalesharks"
@@ -23,14 +17,9 @@
     "img":"https://i.imgur.com/vT1FEoP.jpg",
     "name": "Bida Islands",
     "location": "Sothern Thailand",
-    "deapth": {
-      "min":1,
-      "max":30
-    },
-    "visibility":{
-      "min": 10,
-      "max":35
-    },
+    "deapth": "3 - 35 meter",
+    "visibility":"10 - 35 meter",
+    "level": " beginner to expert",
     "info":"The Bida Islands, Hin Bida and Karen Heng are situated around 1,5 hours by big boat from Koh Lanta. These 4 dive locations give the best chances for sightings of Leopard Sharks and Blacktip Sharks. Although the visibility is less then Koh Ha (around 10 meter), it offers a larger amount of fish life. These dive sites offer plenty of shelter for currents and waves, give above water amazing views of Koh Phi Phi and you can find also around 8 different dive sites. Although these sites are frequently dived from many places, it is possible to find more quiet places with a bit of dive planning. Depth: between 0m. and 40m.",
     "marineLife":
       "Leopardsharks and Blacktipsharks, Giant Gregorian sea fans, Turtles, Porcupine and Puffer fish Lionfish and Scorpionfish Flounders and box Fish different kind of Shrimps, Stingrays and Octopus"
@@ -40,14 +29,8 @@
     "img":"https://i.imgur.com/tE0zJdF.jpg",
     "name": "Koh Phi Phi",
     "location": "Sothern Thailand",
-    "deapth": {
-      "min":5,
-      "max":30
-    },
-    "visibility":{
-      "min": 15,
-      "max":50
-    },
+    "deapth": "5 - 30 meter",
+    "visibility":"10 - 20 meter",
     "level": "beginner to expert",
     "info":"Although Koh Phi Phi (or Koh Pee Pee) is a busy island, it also has very nice views from the boat and some nice dive sites. Around Koh Phi Phi (Koh Pee Pee) there are around 10 different dive sites (including Koh Yung area). Because the under water environment is more rocky, has more hard corals and many different swimthroughs, they are especially nice to practise your buoyancy and do macro photografy. Easy diving dive sites, therefore great for first time divers and snorkelers. At the Palong dive site you have good chances as divers and snorkelers to see black tip and leopard sharks. Most turtles live around Phi Phi Lay (the big uninhabited island, where you can also find Maya Bay from the movie ‘the Beach’). Around the corner divers can dive on the quieter Koh Yung Pinnacle (which can only be dived around half moon, else the current is too strong and visibility bad), the shallow statues dive site and Hin Klai / Karen Heng, which are all good locations for stingrays and leopard sharks. Depth: between 0 and 20 meter. Except for Koh Yung Pinnacle and the Kled Kaew wreck. New: the Thai government has sunk 2 years ago a ship, the Kled Kaew. Because of her depth (13 – 30 meter), this wreck is only diveable for advanced divers or student divers on an advanced divers course. In the last two years corals have covered the wreck, this results in a beautiful colored dive and a quest to find the plenty scorpion fish, lion fish and frog fish.",
     "marineLife":
@@ -56,16 +39,10 @@
   {
     "slug": "hin-daeng",
     "img":"https://i.imgur.com/0EA5bzE.jpg",
-    "name": "Hin Daeng and Hin Muang",
+    "name": "Hin Daeng",
     "location": "Sothern Thailand",
-    "deapth": {
-      "min":10,
-      "max":60
-    },
-    "visibility":{
-      "min": 15,
-      "max":40
-    },
+    "deapth": "5 - 65 meter",
+    "visibility":"10 - 40 meter",
     "level": "advance to expert",
     "info":"Hin Daeng and Hin Muang are two World class, top 10 dive sites. Most divers come to Koh Lanta, because it is the closest island to these famous dive sites. Famous because of the beautiful soft corals and depth (max.60 meter), these are truly advanced dive sites. Furthermore you can do your Padi Advanced Course on Hin Daeng, if you are not an advanced diver, yet. These dive sites can be challenging, because of current, waves and are also deeper sites. Hin Daeng and Hin Muang are advanced dive sites, plus you need recent diving experience (within the last 2 years). They always have currents (sometimes down), waves on the surface and can be challenging, especially around full moon and new moon.",
     "marineLife":
@@ -74,16 +51,10 @@
   {
     "slug": "shark-point",
     "img":"https://i.imgur.com/yfurnfG.jpg",
-    "name": "Anemone Reef, Shark Point & KC Wreck",
+    "name": "Shark Point",
     "location": "Sothern Thailand",
-    "deapth": {
-      "min":5,
-      "max":30
-    },
-    "visibility":{
-      "min": 15,
-      "max":35
-    },
+    "deapth": "5 - 30 meter",
+    "visibility":"5 - 20 meter",
     "level": "advance to expert",
     "info":"These 3 dive sites are next to each other. Anemone Reef & Shark Point used to be together, until the King Cruiser Wreck crashed on it and sunk. Anemone Reef is an under water pinnacle, which starts at 5m. and the deepest point is around 30m. Its filled completely with anemones and some fan corals. Shark Point starts above water and reaches max. 40m. It consists of many different pinnacles and they are all filled with beautiful, colorful soft corals. The King Cruiser Wreck is laying between 14m. and 30m. Although it has amazing sea life and is an interesting dive, visibility is very limited here (around 5m.) and penetration is not advised, because of recent collapses in the hull structure. We usually dive 2 of the 3 dive sites, depending on conditions and level of the divers. Most of our dive trips, we dive only two locations now: Anemone Reef & Shark Point. The King Cruiser Wreck is less interesting for divers right now. Plus we have a great addition in Koh Phi Phi area: the Kled Kaew Wreck. As a 3rd dive on this day, we prefer to take divers to Hin Bida or Hin Klai. Because these are all not protected dive sites in open water, we are very depending on good weather conditions to go here. Around full moon & new moon (and 3 days after those) it might not be possible to dive here. The tides around those dates, give us too much current under water. ",
     "marineLife": "rays, leopard sharks & black tip sharks beautiful soft corals in different colours turtles porcupine and puffer fish different kind of shrimps and nudibrand morray eels and octopus sea horses, ghostpipe fish and pipefish lion fish & scorpion fish many anemone fish"

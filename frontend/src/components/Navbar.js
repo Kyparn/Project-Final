@@ -21,25 +21,38 @@ const Navbar = () => {
       })
     // hämta dives
     // setDives(response)
+    // const toggleButton = document.getElementsByClassName('toggle-button')[0]
+    // const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+    // toggleButton.addEventListener('click', () => {
+    //   navbarLinks.classList.toggle('active')
+    // })
   }, [])
   return (
     <nav className="nav">
       <Link to="/" className="site-title">
-        <p className="title"> 🦈</p>
+        <p className="title">🦈 </p>
       </Link>
-      <ul className="links">
-        {dives.map((dive) => (
-          <li key={dive.name}>
-            <Link to={dive.slug}>{dive.name}</Link>
+      <li className="toggle-button">
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </li>
+      <div className="nav-links">
+        <ul>
+          {dives.map((dive) => (
+            <li key={dive.name}>
+              <Link to={dive.slug}>{dive.name}</Link>
+            </li>
+          ))}
+          <li>
+            <Link to="/blogg">Blogg</Link>
           </li>
-        ))}
-        <li>
-          <Link to="/blogg">Blogg</Link>
-        </li>
-        {/* <li>
-          <Link to="/login">Login</Link>
-        </li> */}
-      </ul>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+        </ul>
+      </div>
     </nav>
   )
 }

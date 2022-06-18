@@ -27,9 +27,6 @@ const DiveDetails = () => {
   }
   return (
     <section className="main-container">
-      <Link to="/" className="backLink">
-        <Backicon /> Back to main
-      </Link>
       <div className="upperinfo">
         <h2 className="infoName">
           Dive site {''}
@@ -45,10 +42,12 @@ const DiveDetails = () => {
       </div>
       <div className="lowerinfo">
         <p className="infoLife">
-          Everyday animal life on this location : {''}
-          {dive.marineLife}
+          Everyday animal life on this location : {dive.marineLife}
         </p>
         <img className="images" src={dive.img} width="450px" />
+        <Link to="/" className="backLink">
+          <Backicon /> Back to main
+        </Link>
       </div>
     </section>
   )

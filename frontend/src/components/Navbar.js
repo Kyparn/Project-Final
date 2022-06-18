@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 
 const Navbar = () => {
+  const [click, setClick] = useState(false)
   const [loading, setLoading] = useState(false)
   const [hasError, setHasError] = useState([])
   const [dives, setDives] = useState([])
@@ -19,8 +20,6 @@ const Navbar = () => {
           setHasError(true)
         }
       })
-    // hämta dives
-    // setDives(response)
     // const toggleButton = document.getElementsByClassName('toggle-button')[0]
     // const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 
@@ -28,12 +27,16 @@ const Navbar = () => {
     //   navbarLinks.classList.toggle('active')
     // })
   }, [])
+  const handleClick = () => {
+    setClick(!click)
+  }
+
   return (
     <nav className="nav">
       <Link to="/" className="site-title">
-        <p className="title">🦈 </p>
+        <p className="title">Snart där </p>
       </Link>
-      <li className="toggle-button">
+      <li className="toggle-button" onClick={handleClick}>
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>

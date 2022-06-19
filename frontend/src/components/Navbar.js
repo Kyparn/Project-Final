@@ -36,16 +36,12 @@ const Navbar = () => {
       <Link to="/" className="site-title">
         <p className="title">🦈</p>
       </Link>
-      <li
-        className="toggle-button"
-        onClick={handleClick}
-        activeclassname="active"
-      >
+      <li className={click ? 'toggle-button' : 'toggle'}>
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
       </li>
-      <div className="nav-links" activeclassname="active">
+      <div className="nav-links">
         <ul>
           {dives.map((dive) => (
             <li key={dive.name}>

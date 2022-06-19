@@ -27,7 +27,6 @@ const Form = ({ blogg, setBlogg }) => {
   return (
     <section className="blogg-container">
       <form onSubmit={onFormSubmit}>
-        <label htmlFor="newBlogg">Skriv något kul!</label>
         <textarea
           className={counter < 6 || counter > 140 ? 'no-words' : 'word-counter'}
           type="text"
@@ -38,20 +37,20 @@ const Form = ({ blogg, setBlogg }) => {
           placeholder="Skriv något kul här!"
         />
         <div className="blogg-container-lowerpart">
-          <p> {140 - counter} /140</p>
+          <p className="text-left"> {140 - counter} /140</p>
           <button
             className="happy-button"
             type="submit"
             disabled={newBlogg.length < 2 || newBlogg.length > 140}
           >
             {''}
-            {/* <span role="img" aria-label="beers">
-              🍺{' '}
-            </span> */}
-            Buy me beer {''}
-            {/* <span role="img" aria-label="beers">
-              🍺{' '}
-            </span> */}
+            <span role="img" aria-label="beers">
+              🦈{' '}
+            </span>{' '}
+            Send {''}
+            <span role="img" aria-label="beers">
+              🦈{' '}
+            </span>
           </button>
         </div>
       </form>

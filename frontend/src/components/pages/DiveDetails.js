@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Backicon } from '../Backicon'
-import Slider from 'components/Slider'
+import Slider from '../Slider/Slider'
+import { SliderData } from '../Slider/SliderData'
 
 const DiveDetails = () => {
   const { slug } = useParams()
@@ -42,12 +43,9 @@ const DiveDetails = () => {
         </p>
       </div>
       <div className="lowerinfo">
-        <p className="infoLife">
-          Everyday animal life on this location : {dive.marineLife}
-        </p>
-        <Slider className="slider" />
-        {/* <img className="images" src={dive.img} width="450px" /> */}
-
+        <p> Everyday animal life on this location </p>
+        <p className="infoLife">{dive.marineLife}</p>
+        <Slider slides={SliderData} />
         <Link to="/" className="backLink">
           <Backicon /> Back to main
         </Link>

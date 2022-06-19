@@ -177,7 +177,6 @@ textarea {
   padding-left: 1em;
   margin: 0;
   min-width: 100%;
-  /* max-width: 100%; */
   min-height: 1em;
   align-content: center;
   text-align: center;
@@ -239,8 +238,10 @@ textarea {
   align-items: center;
 }
 .image {
-  height:300px;
+  height: 30vh;
   border-radius: 10px;
+  box-shadow: 2px 2px 2px black;
+  
 }
 
 .right-arrow {

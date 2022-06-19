@@ -55,15 +55,13 @@ color:white;
   flex-direction: column;
 }
 .nav-links li {
-  z-index: 9;
   list-style: none;
-  padding:1em;
-  display:block;
-  background-color:#333;
+  padding: 0.5em;
+  display: block;
+  background-color: #333;
   overflow: hidden;
   box-sizing: border-box;
   transition: all .5s ease-in-out;
-  
 }
 .nav-links li:hover{
   background-color:#345;
@@ -151,14 +149,14 @@ color:white;
 
 }
 .backLink{
-  margin: auto;
-  padding: 25px;
-  display: inline-flex;
-  align-items: center;
-  font-style: italic;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
+margin: auto;
+padding: 0 0 25px;
+display: inline-flex;
+align-items: center;
+font-style: italic;
+font-weight: bold;
+text-decoration: none;
+color: #333;
 }
 .infoSite{
   padding:1em;
@@ -238,7 +236,7 @@ textarea {
   align-items: center;
 }
 .image {
-  height: 30vh;
+  height: 35vh;
   border-radius: 10px;
   box-shadow: 2px 2px 2px black;
   
@@ -246,7 +244,7 @@ textarea {
 
 .right-arrow {
   position: absolute;
-  top: 50%;
+  bottom:0%;
   right: 3vh;
   font-size: 3rem;
   color: #333;
@@ -257,7 +255,7 @@ textarea {
 
 .left-arrow {
   position: absolute;
-  top: 50%;
+  bottom:0%;
   left: 3vh;
   font-size: 3rem;
   color: #333;
@@ -301,18 +299,15 @@ textarea {
       text-align: center;
       flex-direction: row;
   }
+  .nav-links{
+    padding:2em;
+  }
   .nav-links ul {
     font-size: 14px;
     display: flex;
     width: 100%;
     justify-content: flex-end;
     flex-direction: row;
-  }
-  .nav-links li{
-  font-size: 14px;
-  }
-  .images{
-    width:300px;
   }
   video{
     width: 100%;

@@ -247,9 +247,9 @@ textarea {
 .right-arrow {
   position: absolute;
   top: 50%;
-  right: 32px;
+  right: 3vh;
   font-size: 3rem;
-  color: #fff;
+  color: #333;
   z-index: 10;
   cursor: pointer;
   user-select: none;
@@ -258,9 +258,9 @@ textarea {
 .left-arrow {
   position: absolute;
   top: 50%;
-  left: 32px;
+  left: 3vh;
   font-size: 3rem;
-  color: #fff;
+  color: #333;
   z-index: 10;
   cursor: pointer;
   user-select: none;

@@ -36,10 +36,12 @@ const Navbar = () => {
       <Link to="/" className="site-title">
         <p className="title">🦈</p>
       </Link>
-      <li className={click ? 'toggle-button' : 'toggle'}>
+      <li className="toggle-button" onClick={handleClick}>
+        {/* <li className={click ? 'nav-links' : 'nav-links close'}> */}
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
+        {/* </li> */}
       </li>
       <div className="nav-links">
         <ul>

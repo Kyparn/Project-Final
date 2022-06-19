@@ -39,13 +39,13 @@ const Navbar = () => {
       <li
         className="toggle-button"
         onClick={handleClick}
-        activeClassName="active"
+        activeclassname="active"
       >
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
       </li>
-      <div className="nav-links">
+      <div className="nav-links" activeclassname="active">
         <ul>
           {dives.map((dive) => (
             <li key={dive.name}>

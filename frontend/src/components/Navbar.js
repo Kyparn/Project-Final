@@ -34,9 +34,13 @@ const Navbar = () => {
   return (
     <nav className="nav">
       <Link to="/" className="site-title">
-        <p className="title">Snart där </p>
+        <p className="title">🦈</p>
       </Link>
-      <li className="toggle-button" onClick={handleClick}>
+      <li
+        className="toggle-button"
+        onClick={handleClick}
+        activeClassName="active"
+      >
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>

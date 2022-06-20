@@ -31,6 +31,7 @@ const DiveDetails = () => {
 
     const nextSlide = () => {
       setCurrent(current === length - 1 ? 0 : current + 1)
+      console.log(nextSlide)
     }
 
     const prevSlide = () => {
@@ -39,6 +40,7 @@ const DiveDetails = () => {
 
     if (!Array.isArray(slides) || slides.length <= 0) {
       return null
+      console.log(slides)
     }
 
     return (

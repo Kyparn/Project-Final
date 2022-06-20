@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Backicon } from '../Backicon'
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
-// import Slider from '../Slider/Slider'
-// import { SliderData } from '../Slider/SliderData'
+import Slider from '../Slider/Slider'
+import { SliderData } from '../Slider/SliderData'
 
 const DiveDetails = () => {
   const { slug } = useParams()
@@ -16,6 +15,7 @@ const DiveDetails = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data) {
+          console.log(data)
           setDive(data.response)
         } else {
           setHasError(true)
@@ -24,49 +24,6 @@ const DiveDetails = () => {
       .catch(() => setHasError(true))
       .finally(() => setLoading(false))
   }, [slug])
-
-  const Slider = ({ slides }) => {
-    const [current, setCurrent] = useState(0)
-    const length = slides.length
-
-    const nextSlide = () => {
-      setCurrent(current === length - 1 ? 0 : current + 1)
-      console.log(nextSlide)
-    }
-
-    const prevSlide = () => {
-      setCurrent(current === 0 ? length - 1 : current - 1)
-    }
-
-    if (!Array.isArray(slides) || slides.length <= 0) {
-      return null
-      console.log(slides)
-    }
-
-    return (
-      <section className="slider">
-        <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-        <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
-        {slug.map((slide, index) => {
-          return (
-            <div
-              className={index === current ? 'slide active' : 'slide'}
-              key={index}
-            >
-              {index === current && (
-                <img
-                  src={slide.dive.img}
-                  alt="travel image"
-                  className="image"
-                />
-              )}
-            </div>
-          )
-        })}
-      </section>
-    )
-  }
-
   if (loading) {
     return <h1>Loading...</h1>
   }
@@ -88,7 +45,7 @@ const DiveDetails = () => {
       <div className="lowerinfo">
         <p> Everyday animal life on this location </p>
         <p className="infoLife">{dive.marineLife}</p>
-        <Slider slides={dive.img} />
+        <Slider slides={SliderData} />
         <Link to="/" className="backLink">
           <Backicon /> Back to main
         </Link>

@@ -38,8 +38,10 @@ const DiveDetails = () => {
           Experience {''}
           {dive.level}
         </p>
-        <p className="infoSite">
-          {dive.info} and the deapth is between {dive.deapth}
+        <p className="infoSite">{dive.info}</p>
+        <p className="infodepth">Depth is between{dive.deapth}</p>
+        <p className="infovizz">
+          On an average day the visibility is between {dive.visibility}
         </p>
       </div>
       <div className="lowerinfo">

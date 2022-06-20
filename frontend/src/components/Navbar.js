@@ -13,7 +13,6 @@ const Navbar = () => {
     fetch(`https://final-project-simon.herokuapp.com/myData`)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
         if (data) {
           setDives(data)
         } else {

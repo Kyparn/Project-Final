@@ -69,7 +69,14 @@ color:white;
   background-color:#345;
   border-radius: 30px;
 }
-
+.main-container-video{
+  background: #333;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
 .toggle-button{
 cursor: pointer;
     position: absolute;

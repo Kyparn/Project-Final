@@ -3,7 +3,7 @@ import video from '../img/video.mp4'
 
 const Main = () => {
   return (
-    <div className="main-container">
+    <div className="main-container-video">
       <video src={video} autoPlay loop muted />
       {/* <div className="overlay">
         <div className="content">

@@ -20,30 +20,21 @@ const Navbar = () => {
           setHasError(true)
         }
       })
-    // const toggleButton = document.getElementsByClassName('toggle-button')[0]
-    // const navbarLinks = document.getElementsByClassName('navbar-links')[0]
-
-    // toggleButton.addEventListener('click', () => {
-    //   navbarLinks.classList.toggle('active')
-    // })
   }, [])
   const handleClick = () => {
     setClick(!click)
   }
-
   return (
     <nav className="nav">
       <Link to="/" className="site-title">
         <p className="title">🦈</p>
       </Link>
       <li className="toggle-button" onClick={handleClick}>
-        {/* <li className={click ? 'nav-links' : 'nav-links close'}> */}
         <span className="bar"></span>
         <span className="bar"></span>
         <span className="bar"></span>
-        {/* </li> */}
       </li>
-      <div className="nav-links">
+      <div className={click ? 'nav-links' : 'nav-links close'}>
         <ul>
           {dives.map((dive) => (
             <li key={dive.name}>

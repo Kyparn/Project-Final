@@ -7,7 +7,7 @@ const BloggCard = ({ blogg, handleAddedLikes }) => {
       <div className="message-text">
         <p className="text-blogg">{blogg.message}</p>
         <div className="beer-container">
-          <div>
+          {/* <div>
             <button
               className="beers"
               onClick={() => handleAddedLikes(blogg._id)}
@@ -21,7 +21,7 @@ const BloggCard = ({ blogg, handleAddedLikes }) => {
             {''}
             {'X'} {blogg.beers}
             {''}
-          </div>
+          </div> */}
           <p className="time">{moment(blogg.createdAt).fromNow()}-</p>
         </div>
       </div>

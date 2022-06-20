@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items:flex-start;
    background-color:#333;
-   color:white;
+   color:red;
    }
    .nav-links{
      text-align: center;
@@ -14,7 +14,7 @@
      margin:0.5em;
    }
    .nav a {
-    color: inherit;
+    color: red;
     text-decoration: none;
   }
    .nav-links ul{
@@ -35,14 +35,6 @@
      background-color:#345;
      border-radius: 30px;
    }
-   .main-container-video{
-     background: #333;
-     padding: 1em;
-     display: flex;
-     flex-direction: column;
-     gap: 1em;
-     align-items: center;
-   }
    .toggle-button{
    cursor: pointer;
        position: absolute;
@@ -57,12 +49,11 @@
    .nav-links.close{
      height:10px;
      overflow:hidden;
-     transition: all 2s ease-in-out;
    }
    .toggle-button .bar{
      height:3px;
      width:100%;
-     background-color:white;
+     background-color:red;
    }
    @media screen and (min-width: 1200px) {
     .toggle-button{

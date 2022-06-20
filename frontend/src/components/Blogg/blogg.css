@@ -1,12 +1,15 @@
-.beers{
-    padding:1em;
-  }
   .time{
     text-align: center;
     padding:1px;
   }
   .happy-button{
     padding:1px;
+  }
+  .button-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em;
+    align-items: center;
   }
   .post-container{
     background-color: #fff;
@@ -51,59 +54,12 @@
     border-radius: 20px;
   }
   
-   .login-top {
-    min-width: 400px;
-    padding: 40px;
-    background-color: #ffa500;
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
-    gap: 10px;
-    box-shadow: 1px 1px 5px black;
-    align-items: center;
-  } 
-   .form-container {
-    min-width: 400px;
-    gap: 1em;
-    background: #ff7a00;
-    display: flex;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 5px black;
-    flex-direction: column;
-    align-items: center;
-  }
-
   a {
     text-decoration: none;
   }
-  form {
-  gap: 1em;
-  display:flex;
-  flex-direction: column;
-  }
-  label {
-    font-weight: bold;
-  }
-  input {
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  button {
-    padding: 5px;
-    font-size: 20px;
-    border-radius: 3px;
-    box-shadow: 1px 1px 5px black;
-  }
-  .song {
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px black;
-  } 
-  
   .blogg-container-lowerpart{
     padding: 1px;
     display: flex;
     flex-direction: column;
   }
+  

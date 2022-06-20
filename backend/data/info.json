@@ -20,7 +20,13 @@
   }
   ,{
     "slug": "bida-lsland",
-    "img":"https://i.imgur.com/vT1FEoP.jpg",
+    "img": ["https://i.imgur.com/bBb1YRQ.jpg",
+            "https://i.imgur.com/vT1FEoP.jpg",
+            "https://i.imgur.com/tu8go7d.jpg",
+            "https://i.imgur.com/u3NWNrY.jpg",
+            "https://i.imgur.com/AskcXAK.jpg",
+            "https://i.imgur.com/8MjK9mB.jpg"
+],
     "name": "Bida Islands",
     "location": "Sothern Thailand",
     "deapth": "3 - 35 meter",
@@ -32,7 +38,13 @@
   },
   {
     "slug": "phi-phi",
-    "img":"https://i.imgur.com/tE0zJdF.jpg",
+    "img": ["https://i.imgur.com/bBb1YRQ.jpg",
+            "https://i.imgur.com/vT1FEoP.jpg",
+            "https://i.imgur.com/tu8go7d.jpg",
+            "https://i.imgur.com/u3NWNrY.jpg",
+            "https://i.imgur.com/AskcXAK.jpg",
+            "https://i.imgur.com/8MjK9mB.jpg"
+      ],
     "name": "Koh Phi Phi",
     "location": "Sothern Thailand",
     "deapth": "5 - 30 meter",
@@ -44,7 +56,13 @@
   },
   {
     "slug": "hin-daeng",
-    "img":"https://i.imgur.com/0EA5bzE.jpg",
+      "img": ["https://i.imgur.com/bBb1YRQ.jpg",
+              "https://i.imgur.com/vT1FEoP.jpg",
+              "https://i.imgur.com/tu8go7d.jpg",
+              "https://i.imgur.com/u3NWNrY.jpg",
+              "https://i.imgur.com/AskcXAK.jpg",
+              "https://i.imgur.com/8MjK9mB.jpg"
+],
     "name": "Hin Daeng",
     "location": "Sothern Thailand",
     "deapth": "5 - 65 meter",
@@ -56,7 +74,13 @@
   },
   {
     "slug": "shark-point",
-    "img":"https://i.imgur.com/yfurnfG.jpg",
+    "img": ["https://i.imgur.com/bBb1YRQ.jpg",
+            "https://i.imgur.com/vT1FEoP.jpg",
+            "https://i.imgur.com/tu8go7d.jpg",
+            "https://i.imgur.com/u3NWNrY.jpg",
+            "https://i.imgur.com/AskcXAK.jpg",
+            "https://i.imgur.com/8MjK9mB.jpg"
+      ],
     "name": "Shark Point",
     "location": "Sothern Thailand",
     "deapth": "5 - 30 meter",

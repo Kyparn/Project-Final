@@ -3,6 +3,8 @@ import { useDispatch, useSelector, batch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { API_URL } from '../utils/API'
 
+import './login.css'
+
 import user from '../utils/reducer'
 
 const Login = () => {
@@ -16,7 +18,7 @@ const Login = () => {
 
   useEffect(() => {
     if (accessToken) {
-      navigate('/blogg')
+      navigate('/')
     }
   }, [accessToken])
 
@@ -39,6 +41,7 @@ const Login = () => {
             dispatch(user.actions.setAccessToken(data.accessToken))
             dispatch(user.actions.setUserName(data.username))
             dispatch(user.actions.setError(null))
+            console.log(data)
           })
         } else {
           batch(() => {
@@ -53,25 +56,25 @@ const Login = () => {
   }
   return (
     <>
-      <div className="main-container">
+      <div className="login-container">
         <form onSubmit={onFormSubmit}>
-          <div className="login-top">
-            <label htmlFor="register">Register</label>
-            <input
-              type="radio"
-              id="register"
-              checked={mode === 'register'}
-              onChange={() => setMode('register')}
-            />
-            <label htmlFor="login">Login</label>
-            <input
-              type="radio"
-              id="login"
-              checked={mode === 'login'}
-              onChange={() => setMode('login')}
-            />
-          </div>
           <div className="form-container">
+            <div className="login-top">
+              <label htmlFor="register">New user</label>
+              <input
+                type="radio"
+                id="register"
+                checked={mode === 'register'}
+                onChange={() => setMode('register')}
+              />
+              <label htmlFor="login">Login</label>
+              <input
+                type="radio"
+                id="login"
+                checked={mode === 'login'}
+                onChange={() => setMode('login')}
+              />
+            </div>
             <label htmlFor="username">Username</label>
             <input
               type="text"

@@ -1,0 +1,109 @@
+.beers{
+    padding:1em;
+  }
+  .time{
+    text-align: center;
+    padding:1px;
+  }
+  .happy-button{
+    padding:1px;
+  }
+  .post-container{
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 1em;
+    max-width: 400px;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    justify-content: left;
+    box-shadow: 6px 6px 1px 1px rgb(5 5 5 / 90%);
+  }
+  
+  .text-blogg{
+    text-align: center;
+    padding:1em;
+    font-weight: bold;
+  }
+  textarea {
+    border: 1px solid #000;
+    padding-top: 1em;
+    padding-left: 1em;
+    margin: 0;
+    min-width: 100%;
+    min-height: 1em;
+    align-content: center;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .blogg-container{
+    box-shadow: 1px 2px 2px 3px black;
+    background-color: #e3e2e2;
+    border: 1px solid #000;
+    padding: 1em;
+    max-width:400px;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    border-radius: 20px;
+  }
+  
+   .login-top {
+    min-width: 400px;
+    padding: 40px;
+    background-color: #ffa500;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 10px;
+    box-shadow: 1px 1px 5px black;
+    align-items: center;
+  } 
+   .form-container {
+    min-width: 400px;
+    gap: 1em;
+    background: #ff7a00;
+    display: flex;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px black;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  form {
+  gap: 1em;
+  display:flex;
+  flex-direction: column;
+  }
+  label {
+    font-weight: bold;
+  }
+  input {
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  button {
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px black;
+  }
+  .song {
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px black;
+  } 
+  
+  .blogg-container-lowerpart{
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+  }

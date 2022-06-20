@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { BLOGG_URL } from '../utils/API'
 
+import './blogg.css'
+
 const Form = ({ blogg, setBlogg }) => {
   const [newBlogg, setNewBlogg] = useState('')
   const [counter, setCounter] = useState(0)
@@ -41,14 +43,14 @@ const Form = ({ blogg, setBlogg }) => {
           <button
             className="happy-button"
             type="submit"
-            disabled={newBlogg.length < 2 || newBlogg.length > 140}
+            disabled={newBlogg.length < 6 || newBlogg.length > 140}
           >
             {''}
-            <span role="img" aria-label="beers">
+            <span role="img" aria-label="sharks">
               🦈{' '}
             </span>{' '}
             Send {''}
-            <span role="img" aria-label="beers">
+            <span role="img" aria-label="sharks">
               🦈{' '}
             </span>
           </button>

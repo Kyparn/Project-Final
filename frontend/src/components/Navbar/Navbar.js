@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 
+import './nav.css'
 const Navbar = () => {
   const [click, setClick] = useState(false)
   const [loading, setLoading] = useState(false)

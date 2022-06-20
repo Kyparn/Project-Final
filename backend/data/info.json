@@ -1,7 +1,13 @@
 [
     {
     "slug": "koh-haa",
-    "img": ["https://i.imgur.com/bBb1YRQ.jpg", "https://i.imgur.com/vT1FEoP.jpg"],
+    "img": ["https://i.imgur.com/bBb1YRQ.jpg",
+            "https://i.imgur.com/vT1FEoP.jpg",
+            "https://i.imgur.com/tu8go7d.jpg",
+            "https://i.imgur.com/u3NWNrY.jpg",
+            "https://i.imgur.com/AskcXAK.jpg",
+            "https://i.imgur.com/8MjK9mB.jpg"
+      ],
     "name": "Koh Haa",
     "location": "Sothern Thailand",
     "deapth": "1 - 50 meter",

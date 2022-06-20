@@ -7,6 +7,7 @@ import listEndpoints from 'express-list-endpoints'
 import bodyParser from 'body-parser'
 
 import diveData from './data/info.json'
+import { rmSync } from 'fs'
 
 const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/backend'
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -103,7 +104,7 @@ app.post('/login', async (req, res) => {
       })
     }
   } catch (error) {
-    res.status(400).json({
+    res.status(404).json({
       response: error,
       success: false,
     })
@@ -151,6 +152,7 @@ app.get('/blogg', async (req, res) => {
   const blogg = await Blogg.find().sort({ createAt: 'desc' }).limit(20).exec()
   res.json(blogg)
 })
+
 app.post('/blogg', async (req, res) => {
   const { message } = req.body
 
@@ -161,6 +163,24 @@ app.post('/blogg', async (req, res) => {
     res.status(400).json({ respone: error, success: false })
   }
 })
+app.delete('/blogg/:id', authenticateUser, async (req, res) => {
+  const { id } = req.params
+
+  try {
+    const remove = await Blogg.findByIdAndDelete({ _id: id })
+    if (remove) {
+      res.status(200).json({ respone: remove, success: true })
+    } else {
+      res.status(404).json({
+        respone: 'Did not find it',
+        success: false,
+      })
+    }
+  } catch (error) {
+    res.status(400).json({ respone: error, success: false })
+  }
+})
+
 app.post('/blogg/:bloggId/like', async (req, res) => {
   const { bloggId } = req.params
   try {

@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { SliderData } from './SliderData'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
 
+import './slider.css'
+
 const Slider = ({ slides }) => {
   const [current, setCurrent] = useState(0)
   const length = slides.length
@@ -19,7 +21,7 @@ const Slider = ({ slides }) => {
   }
 
   return (
-    <section className="slider">
+    <section className="slider-container">
       <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
       {SliderData.map((slide, index) => {

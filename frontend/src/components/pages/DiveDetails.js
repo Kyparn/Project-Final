@@ -45,7 +45,7 @@ const DiveDetails = () => {
       <div className="lowerinfo">
         <p> Everyday animal life on this location </p>
         <p className="infoLife">{dive.marineLife}</p>
-        <Slider slides={SliderData} />
+        <Slider slides={dive.img} />
         <Link to="/" className="backLink">
           <Backicon /> Back to main
         </Link>

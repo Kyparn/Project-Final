@@ -198,7 +198,7 @@ textarea {
   justify-content: left;
   border-radius: 20px;
 }
-.login-top {
+/* .login-top {
   min-width: 400px;
   padding: 40px;
   background-color: #ffa500;
@@ -208,9 +208,8 @@ textarea {
   gap: 10px;
   box-shadow: 1px 1px 5px black;
   align-items: center;
-}
-
-.form-container {
+} 
+ .form-container {
   min-width: 400px;
   gap: 1em;
   background: #ff7a00;
@@ -252,7 +251,7 @@ button {
 .song {
   border-radius: 5px;
   box-shadow: 1px 1px 5px black;
-}
+} */
 
 .blogg-container-lowerpart{
   padding: 1px;

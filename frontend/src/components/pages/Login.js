@@ -41,6 +41,7 @@ const Login = () => {
             dispatch(user.actions.setAccessToken(data.accessToken))
             dispatch(user.actions.setUserName(data.username))
             dispatch(user.actions.setError(null))
+            console.log(data)
           })
         } else {
           batch(() => {

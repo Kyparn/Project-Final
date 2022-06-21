@@ -3,7 +3,7 @@ import moment from 'moment'
 
 import './blogg.css'
 
-const BloggCard = ({ blogg, handleAddedLikes }) => {
+const BloggCard = ({ blogg }) => {
   return (
     <section className="post-container" key={blogg._id}>
       <div className="message-text">

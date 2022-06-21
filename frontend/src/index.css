@@ -113,12 +113,14 @@ color: #333;
 }
 
 .main-container-video{
+
   background: #333;
-  padding: 1em;
+  padding: 6em 1em 6em;
   display: flex;
   flex-direction: column;
   gap: 1em;
   align-items: center;
+
 }
 .more-links {
   justify-content: center;
@@ -137,6 +139,10 @@ color: #333;
 .footer-text{
   color:white;
 }
+.image{
+  width:350px;
+  margin:auto;
+}
 /* Tablets */
 
 @media screen and (min-width: 768px) {
@@ -145,7 +151,7 @@ color: #333;
   padding: 2em;
 }
 .image{
-  height: 50vh;
+  width:650px;
 }
 .backLink{
   padding:1em;
@@ -162,5 +168,11 @@ color: #333;
     }
     .links {
       height: 5em;
+    }
+    .main-container-video{
+
+      background: #333;
+      padding: 0px;
+    
     }
 }

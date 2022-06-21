@@ -28,7 +28,6 @@ app.use((req, res, next) => {
   }
 })
 
-// Codealong with Van, then Daniel
 const UserSchema = new mongoose.Schema({
   username: {
     type: String,
@@ -47,16 +46,15 @@ const UserSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', UserSchema)
 
-// Registration endpoint
 app.post('/register', async (req, res) => {
   const { username, password } = req.body
 
   try {
     const salt = bcrypt.genSaltSync()
 
-    if (password.length < 8) {
+    if (password.length < 6) {
       res.status(400).json({
-        response: 'Password must be at least 8 characters long',
+        response: 'Password must be at least  characters long',
         success: false,
       })
     } else {
@@ -83,7 +81,6 @@ app.post('/register', async (req, res) => {
   }
 })
 
-// Login endpoint
 app.post('/login', async (req, res) => {
   const { username, password } = req.body
   try {
@@ -110,7 +107,6 @@ app.post('/login', async (req, res) => {
   }
 })
 
-// Authentication
 const authenticateUser = async (req, res, next) => {
   const accessToken = req.header('Authorization')
   try {
@@ -130,8 +126,6 @@ const authenticateUser = async (req, res, next) => {
     })
   }
 }
-
-// Info for my posts
 
 const BloggSchema = new mongoose.Schema({
   message: {
@@ -185,22 +179,6 @@ app.delete('/blogg/:id', authenticateUser, async (req, res) => {
   }
 })
 
-app.post('/blogg/:bloggId/like', async (req, res) => {
-  const { bloggId } = req.params
-  try {
-    const updatedBlogg = await Blogg.findByIdAndUpdate(
-      bloggId,
-      { $inc: { hearts: 1 } },
-      { new: true },
-    )
-    res.status(200).json({ respone: updatedBlogg, success: true })
-  } catch (error) {
-    res.status(400).json({ respone: error, success: false })
-  }
-})
-
-//SiteINFO for my frontend
-
 const SiteInfo = mongoose.model('SiteInfo', {
   diveId: Number,
   name: String,
@@ -224,13 +202,10 @@ if (process.env.RESET_DB) {
   seedDatabase()
 }
 
-//Showing all ENDPOINTS
-
 app.get('/', (req, res) => {
   res.send(listEndpoints(app))
 })
 
-// Showing all DIVE INFO
 app.get('/myData', (req, res) => {
   try {
     if (!diveData) {
@@ -258,7 +233,7 @@ app.get('/myData/dive/:slug', (req, res) => {
     res.status(400).json({ response: error, success: false })
   }
 })
-// Start the server
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`)
 })

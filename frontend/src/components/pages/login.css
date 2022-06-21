@@ -1,6 +1,6 @@
 .login-top {
-  min-width: 400px;
-  padding: 2em;
+  max-width: 350px;
+  padding: 1em;
   background-color: #1600ff3d;
   display: flex;
   justify-content: center;
@@ -16,7 +16,7 @@
     background-attachment: fixed;
   }
   .form-container {
-    min-width: 400px;
+    max-width: 350px;
     gap: 1em;
     background: red;
     display: flex;

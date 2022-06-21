@@ -7,7 +7,6 @@ import listEndpoints from 'express-list-endpoints'
 import bodyParser from 'body-parser'
 
 import diveData from './data/info.json'
-import { rmSync } from 'fs'
 
 const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost/backend'
 mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -29,14 +28,12 @@ app.use((req, res, next) => {
   }
 })
 
-// makeing a new USER
-
+// Codealong with Van, then Daniel
 const UserSchema = new mongoose.Schema({
   username: {
     type: String,
     required: true,
     unique: true,
-    trim: true,
   },
   password: {
     type: String,
@@ -50,18 +47,21 @@ const UserSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', UserSchema)
 
+// Registration endpoint
 app.post('/register', async (req, res) => {
   const { username, password } = req.body
 
   try {
     const salt = bcrypt.genSaltSync()
 
-    if (password.length < 6) {
+    if (password.length < 8) {
       res.status(400).json({
-        response: 'Password must be at least 6 characters long',
+        response: 'Password must be at least 8 characters long',
         success: false,
       })
     } else {
+      console.log(password)
+      console.log(username)
       const newUser = await new User({
         username: username,
         password: bcrypt.hashSync(password, salt),
@@ -83,8 +83,7 @@ app.post('/register', async (req, res) => {
   }
 })
 
-// User LOGIN
-
+// Login endpoint
 app.post('/login', async (req, res) => {
   const { username, password } = req.body
   try {
@@ -99,20 +98,19 @@ app.post('/login', async (req, res) => {
       })
     } else {
       res.status(400).json({
-        response: 'Password don´t',
+        response: "username and password don't match",
         success: false,
       })
     }
   } catch (error) {
-    res.status(404).json({
+    res.status(400).json({
       response: error,
       success: false,
     })
   }
 })
 
-//checking for AUTHENTICATION
-
+// Authentication
 const authenticateUser = async (req, res, next) => {
   const accessToken = req.header('Authorization')
   try {
@@ -120,10 +118,16 @@ const authenticateUser = async (req, res, next) => {
     if (user) {
       next()
     } else {
-      res.status(401).json({ success: false, message: 'Not authorized' })
+      res.status(401).json({
+        response: 'Please log in to proceed',
+        success: false,
+      })
     }
   } catch (error) {
-    res.status(400).json({ success: false, message: 'Invalid request', error })
+    res.status(400).json({
+      response: error,
+      success: false,
+    })
   }
 }
 

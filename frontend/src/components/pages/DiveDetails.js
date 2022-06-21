@@ -48,11 +48,7 @@ const DiveDetails = () => {
         <p> Everyday animal life on this location </p>
         <p className="infoLife">{dive.marineLife}</p>
         {/* <Slider slides={SliderData} /> */}
-        <img
-          src={dive.map((dive) => (
-            <div>{dive.img}</div>
-          ))}
-        />
+        <img className="image" src={dive.img} />
         <Link to="/" className="backLink">
           <Backicon /> Back to main
         </Link>

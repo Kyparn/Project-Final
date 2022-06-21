@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Backicon } from '../Backicon'
-import ImageGallery from 'react-image-gallery'
-// import Slider from '../Slider/Slider'
-// import { SliderData } from '../Slider/SliderData'
+import Slider from '../Slider/Slider'
+import { SliderData } from '../Slider/SliderData'
 
 const DiveDetails = () => {
   const { slug } = useParams()
   const [dive, setDive] = useState()
   const [hasError, setHasError] = useState(false)
   const [loading, setLoading] = useState(true)
+  const [imges, setImges] = useState([])
+
   useEffect(() => {
     setLoading(true)
     fetch(`https://final-project-simon.herokuapp.com/myData/dive/${slug}`)
@@ -17,7 +18,13 @@ const DiveDetails = () => {
       .then((data) => {
         if (data) {
           console.log(data)
+
+          setImges([])
+
           setDive(data.response)
+          data.response.img.map((singleimge) => {
+            setImges((oldImgs) => [...oldImgs, { image: singleimge }])
+          })
         } else {
           setHasError(true)
         }
@@ -48,8 +55,8 @@ const DiveDetails = () => {
       <div className="lowerinfo">
         <p> Everyday animal life on this location </p>
         <p className="infoLife">{dive.marineLife}</p>
-        {/* <Slider slides={SliderData} /> */}
-        <img className="image" src={dive.img} />
+        <Slider slides={imges} />
+        {/* <img className="image" src={dive.img} /> */}
         <Link to="/" className="backLink">
           <Backicon /> Back to main
         </Link>

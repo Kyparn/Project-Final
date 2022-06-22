@@ -6,8 +6,9 @@
    color:white;
    }
    .horizontal-line {
-    width: 90%;
-    border-top: 1px solid var(--ffName);
+    display:none;
+    width: 100%;
+    border-top: 1px solid #333;
     opacity: 0.5;
   }
    .nav-links{
@@ -80,4 +81,7 @@
     .nav-links li {
       margin: auto;
  }
+ .horizontal-line {
+  display:block;
+}
 }

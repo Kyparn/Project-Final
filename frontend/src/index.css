@@ -93,7 +93,7 @@ font-family: var(--ffM);
 }.infoLife {
   padding:1em;
   line-height: 1.6em;
-font-family: var(--ffM);
+  font-family: var(--ffM);
 }
 /* 
 .text-left{

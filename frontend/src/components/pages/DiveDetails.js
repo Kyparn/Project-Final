@@ -37,30 +37,33 @@ const DiveDetails = () => {
   }
   return (
     <section className="main-container">
-      <div className="upperinfo">
-        <h2 className="infoName">
-          Dive site {''}
-          {dive.name}
-        </h2>
-        <p className="infoLevel">
-          Experience {''}
-          {dive.level}
-        </p>
-        <p className="infoSite">{dive.info}</p>
-        <p className="infodepth">Depth is between{dive.deapth}</p>
-        <p className="infovizz">
-          On an average day the visibility is between {dive.visibility}
-        </p>
-      </div>
-      <div className="lowerinfo">
-        <p> Everyday animal life on this location </p>
-        <p className="infoLife">{dive.marineLife}</p>
-        <Slider slides={imges} />
-        {/* <img className="image" src={dive.img} /> */}
-        <Link to="/" className="backLink">
-          <Backicon /> Back to main
-        </Link>
-      </div>
+      <wrapper className="inner-container">
+        <div className="upperinfo">
+          <h2 className="infoName">
+            Dive site {''}
+            {dive.name}
+          </h2>
+          <p className="infoLevel">
+            Experience {''}
+            {dive.level}
+          </p>
+          <p className="infoSite">{dive.info1}</p>
+          <p className="infoSite">{dive.infotwo}</p>
+          <p className="infoSite">{dive.info}</p>
+          <p className="infodepth">Depth is between{dive.deapth}</p>
+          <p className="infovizz">
+            On an average day the visibility is between {dive.visibility}
+          </p>
+        </div>
+        <div className="lowerinfo">
+          <p> Everyday animal life on this location </p>
+          <p className="infoLife">{dive.marineLife}</p>
+          <Slider slides={imges} />
+          <Link to="/" className="backLink">
+            <Backicon /> Back to main
+          </Link>
+        </div>
+      </wrapper>
     </section>
   )
 }

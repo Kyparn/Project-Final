@@ -42,7 +42,7 @@
     transform: scale(1.08);
   
   }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1024px) {
       .image {
       height: 50vh;
     border-radius: 10px;

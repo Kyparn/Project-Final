@@ -104,12 +104,16 @@ color: #333;
   text-align: center;
   padding:1em;
 }
-.main-container{
+.main-container{  
+  width:100%;
   padding:1em;
     display: flex;
     flex-direction: column;
     gap:1em;
     align-items: center;  
+}
+.inner-container{
+  width:80%;
 }
 
 .main-container-video{
@@ -159,7 +163,7 @@ color: #333;
 }
 /* BigScreen */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   video{ 
     border-radius:0px;
     width: 100%;

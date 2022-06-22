@@ -53,12 +53,12 @@ display:block;
   align-items: center;
   color: white;
 }
-.overlay {
+/* .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,.4);
-}
+} */
 .upperinfo{
   justify-items: center;
   display: grid;
@@ -83,16 +83,17 @@ font-weight: bold;
 text-decoration: none;
 color: #333;
 }
-.infoName{
-  --ffM: 'Montserrat', sans-serif;
+.info{
+  font-family: var(--ffR);
 }
 .infoSite{
 line-height: 1.6em;
-  --ffR: 'Roboto', sans-serif;
+font-family: var(--ffM);
 
-}.infoLife{
-  padding: 1em;
-  --ffR: 'Roboto', sans-serif;
+}.infoLife {
+  padding:1em;
+  line-height: 1.6em;
+font-family: var(--ffM);
 }
 /* 
 .text-left{

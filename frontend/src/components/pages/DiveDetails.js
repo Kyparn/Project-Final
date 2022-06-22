@@ -39,24 +39,24 @@ const DiveDetails = () => {
     <section className="main-container">
       <wrapper className="inner-container">
         <div className="upperinfo">
-          <h2 className="infoName">
+          <h2 className="info">
             Dive site {''}
             {dive.name}
           </h2>
-          <h3 className="infoLevel">
+          <h3 className="info">
             Experience {''}
             {dive.level}
           </h3>
           <p className="infoSite">{dive.info1}</p>
           <p className="infoSite">{dive.info2}</p>
           <p className="infoSite">{dive.info3}</p>
-          <p className="infodepth">Depth is between{dive.deapth}</p>
-          <p className="infovizz">
+          <p className="infoSite">Depth is between{dive.deapth}</p>
+          <p className="infoSite">
             On an average day the visibility is between {dive.visibility}
           </p>
         </div>
         <div className="lowerinfo">
-          <h3 className="infoLevel"> Everyday animal life on this location </h3>
+          <h3 className="info"> Everyday animal life on this location </h3>
           <p className="infoLife">{dive.marineLife}</p>
           <Slider slides={imges} />
           <Link to="/" className="backLink">

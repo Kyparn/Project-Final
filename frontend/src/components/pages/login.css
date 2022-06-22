@@ -1,12 +1,12 @@
 .login-top {
   max-width: 350px;
-  gap: 1em;
-  background: linear-gradient(45deg, #333, transparent);
+  padding: 1em;
+  background-color: #1600ff3d;
   display: flex;
-  padding: 3em;
+  justify-content: center;
   border-radius: 1em;
+  gap: 1em;
   box-shadow: 2px 2px 1em black;
-  flex-direction: column;
   align-items: center;
   } 
   .error-container {
@@ -18,7 +18,7 @@
   .form-container {
     max-width: 350px;
     gap: 1em;
-    background: red;
+    background: linear-gradient(45deg, #333, transparent);
     display: flex;
     padding: 3em;
     border-radius: 1em;

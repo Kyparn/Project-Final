@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <nav className="nav">
       <Link to="/" className="site-title">
-        <p className="title">🦈</p>
+        <p className="title">Namn tack?</p>
       </Link>
       <hr className="horizontal-line" />
       <li className="toggle-button" onClick={handleClick}>

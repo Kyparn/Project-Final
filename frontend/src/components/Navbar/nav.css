@@ -65,6 +65,9 @@
     .toggle-button{
       display:none;
     }
+   .title{
+    font-size:1.5em;
+   } 
     .nav{
       align-items: center;
     }
@@ -72,7 +75,6 @@
       padding:2em;
     }
     .nav-links ul {
-      font-size: 14px;
       display: flex;
       width: 100%;
       justify-content: flex-end;

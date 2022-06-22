@@ -79,8 +79,8 @@
 
     .left-arrow {
       position: absolute;
-      bottom: -17%;
-      left: 10%;
+      bottom: -22%;
+      left: 18%;
       font-size: 2.5em;
       color: #333;
       z-index: 10;
@@ -90,8 +90,8 @@
   }
   .right-arrow {
     position: absolute;
-    bottom: -17%;
-    right: 10%;
+    bottom: -22%;
+    right: 18%;
     font-size: 2.5em;
     color: #333;
     z-index: 10;
@@ -105,6 +105,6 @@
 }
  .image {
   height: 55vh;
-  width: 100vh;
+
 }
 }

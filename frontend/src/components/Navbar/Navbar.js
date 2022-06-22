@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-// import { getCookie } from '../utils/cookieHelper'
 
 import './nav.css'
 
@@ -26,15 +25,11 @@ const Navbar = () => {
   const handleClick = () => {
     setClick(!click)
   }
-  // const isLoggedIn = () => getCookie('accessToken')
 
-  // if (!isLoggedIn) {
-  //   return null
-  // }
   return (
     <nav className="nav">
       <Link to="/" className="site-title">
-        <p className="title">Namn tack?</p>
+        <p className="title">Andaman Sea</p>
       </Link>
       <hr className="horizontal-line" />
       <li className="toggle-button" onClick={handleClick}>

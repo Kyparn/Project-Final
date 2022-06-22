@@ -6,7 +6,7 @@
   align-items: center;
   }
   .image {
-    height: 33vh;
+    height: 27vh;
     border-radius: 10px;
     box-shadow: 2px 2px 2px black; 
   }
@@ -46,7 +46,7 @@
 
     .left-arrow {
       position: absolute;
-      bottom: -24%;
+      bottom: -18%;
       left: 15%;
       font-size: 2.5em;
       color: #333;
@@ -57,7 +57,7 @@
   }
   .right-arrow {
     position: absolute;
-    bottom: -24%;
+    bottom: -18%;
     right: 15%;
     font-size: 2.5em;
     color: #333;

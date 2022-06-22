@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { Backicon } from '../Backicon'
 import Slider from '../Slider/Slider'
-import { SliderData } from '../Slider/SliderData'
 
 const DiveDetails = () => {
   const { slug } = useParams()

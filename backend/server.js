@@ -161,23 +161,6 @@ app.post('/blogg', async (req, res) => {
     res.status(400).json({ respone: error, success: false })
   }
 })
-app.delete('/blogg/:id', authenticateUser, async (req, res) => {
-  const { id } = req.params
-
-  try {
-    const remove = await Blogg.findByIdAndDelete({ _id: id })
-    if (remove) {
-      res.status(200).json({ respone: remove, success: true })
-    } else {
-      res.status(404).json({
-        respone: 'Did not find it',
-        success: false,
-      })
-    }
-  } catch (error) {
-    res.status(400).json({ respone: error, success: false })
-  }
-})
 
 const SiteInfo = mongoose.model('SiteInfo', {
   diveId: Number,

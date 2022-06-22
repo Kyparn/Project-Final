@@ -36,7 +36,7 @@ const DiveDetails = () => {
   }
   return (
     <section className="main-container">
-      <wrapper className="inner-container">
+      <div className="inner-container">
         <div className="upperinfo">
           <h2 className="info">
             Dive site {''}
@@ -62,7 +62,7 @@ const DiveDetails = () => {
             <Backicon /> Back to main
           </Link>
         </div>
-      </wrapper>
+      </div>
     </section>
   )
 }

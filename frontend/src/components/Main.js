@@ -5,11 +5,6 @@ const Main = () => {
   return (
     <div className="main-container-video">
       <video src={video} autoPlay loop muted />
-      {/* <div className="overlay">
-        <div className="content">
-          <p>Hej hej Simon</p>{' '}
-        </div>
-      </div> */}
     </div>
   )
 }

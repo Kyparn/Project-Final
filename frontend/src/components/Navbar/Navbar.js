@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
+// import { getCookie } from '../utils/cookieHelper'
 
 import './nav.css'
+
 const Navbar = () => {
   const [click, setClick] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -24,6 +26,11 @@ const Navbar = () => {
   const handleClick = () => {
     setClick(!click)
   }
+  // const isLoggedIn = () => getCookie('accessToken')
+
+  // if (!isLoggedIn) {
+  //   return null
+  // }
   return (
     <nav className="nav">
       <Link to="/" className="site-title">
@@ -42,11 +49,11 @@ const Navbar = () => {
               <Link to={dive.slug}>{dive.name}</Link>
             </li>
           ))}
-          {/* <li>
-           <Link to="/blogg">Blogg</Link>
-          </li> */}
           <li>
-            <Link to="/login">Blogg</Link>
+            <Link to="/login">
+              Blogg {''}/ {''}
+            </Link>
+            <Link to="/"> Logga ut</Link>
           </li>
         </ul>
       </div>

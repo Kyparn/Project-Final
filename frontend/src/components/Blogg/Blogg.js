@@ -35,7 +35,7 @@ const Blogg = () => {
     return <h1>Loading...</h1>
   }
   return (
-    <>
+    <section className="main-blogg-container">
       <Form setBlogg={setBlogg} blogg={blogg} />
       {blogg.map((blogg) => (
         <div key={blogg._id}>
@@ -43,7 +43,7 @@ const Blogg = () => {
           <BloggCard blogg={blogg} handleAddedLikes={handleAddedLikes} />
         </div>
       ))}
-    </>
+    </section>
   )
 }
 export default Blogg

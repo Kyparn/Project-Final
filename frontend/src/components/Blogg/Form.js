@@ -27,7 +27,7 @@ const Form = ({ blogg, setBlogg }) => {
     setCounter(0)
   }
   return (
-    <section className="blogg-container">
+    <section className="inner-container">
       <form onSubmit={onFormSubmit}>
         <textarea
           className={counter < 6 || counter > 140 ? 'no-words' : 'word-counter'}
@@ -38,23 +38,20 @@ const Form = ({ blogg, setBlogg }) => {
           onChange={newBloggChange}
           placeholder="Skriv något kul här!"
         />
-        <div className="blogg-container-lowerpart">
-          <p className="text-left"> {140 - counter} /140</p>
-          <button
-            className="happy-button"
-            type="submit"
-            disabled={newBlogg.length < 6 || newBlogg.length > 140}
-          >
-            {''}
-            <span role="img" aria-label="sharks">
-              🦈{' '}
-            </span>{' '}
-            Send {''}
-            <span role="img" aria-label="sharks">
-              🦈{' '}
-            </span>
-          </button>
-        </div>
+        <button
+          className="happy-button"
+          type="submit"
+          disabled={newBlogg.length < 2 || newBlogg.length > 250}
+        >
+          {''}
+          <span role="img" aria-label="sharks">
+            🦈{' '}
+          </span>{' '}
+          Send {''}
+          <span role="img" aria-label="sharks">
+            🦈{' '}
+          </span>
+        </button>
       </form>
     </section>
   )

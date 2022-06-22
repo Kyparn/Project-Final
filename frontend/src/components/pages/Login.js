@@ -42,7 +42,6 @@ const Login = () => {
             dispatch(user.actions.setUserName(data.username))
             dispatch(user.actions.setError(null))
             navigate('/blogg')
-            console.log(data)
           })
         } else {
           batch(() => {

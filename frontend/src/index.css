@@ -38,10 +38,6 @@ height: 100%;
 display:block;
 }
 
-.container {
-  margin: 1rem;
-  text-align: center;
-}
 .content {
   position: absolute;
   width: 100%;
@@ -99,11 +95,7 @@ text-align: center;
 .loading{
   margin: auto;
 }
-/* 
-.text-left{
-  text-align: center;
-  padding:1em;
-} */
+
 .main-container{  
   width:100%;
   padding:1em;
@@ -113,7 +105,8 @@ text-align: center;
   align-items: center;  
 }
 .inner-container{
-  width:80%;
+  width: 80%;
+  margin: auto;
 }
 
 .main-container-video{
@@ -172,4 +165,7 @@ text-align: center;
     .infoLife{
       padding:2em;
     }
+    .backLink {
+      padding: 2.5em;
+  }
 }

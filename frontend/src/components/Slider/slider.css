@@ -1,6 +1,6 @@
 .slider-container {
   position: relative;
-  height: 45vh;
+  height: 33vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,6 +69,9 @@
  .image {
   height: 45vh;
 } 
+.slider-container {
+  height: 45vh;
+}
 }
 
 
@@ -76,7 +79,7 @@
 
     .left-arrow {
       position: absolute;
-      bottom: -25%;
+      bottom: -15%;
       left: 10%;
       font-size: 2.5em;
       color: #333;
@@ -87,7 +90,7 @@
   }
   .right-arrow {
     position: absolute;
-    bottom: -25%;
+    bottom: -15%;
     right: 10%;
     font-size: 2.5em;
     color: #333;
@@ -96,8 +99,12 @@
     -webkit-user-select: none;
     user-select: none;
 }
+
+.slider-container {
+  height: 55vh;
+}
  .image {
-  height: 50vh;
+  height: 55vh;
   width: 100vh;
 }
 }

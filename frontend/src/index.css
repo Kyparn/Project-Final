@@ -89,11 +89,15 @@ color: #333;
 .infoSite{
 line-height: 1.6em;
 font-family: var(--ffM);
+text-align: center;
 
 }.infoLife {
   padding:1em;
   line-height: 1em;
   font-family: var(--ffM);
+}
+.loading{
+  margin: auto;
 }
 /* 
 .text-left{

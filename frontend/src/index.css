@@ -3,12 +3,14 @@
   margin: 0;
   box-sizing: border-box;
 }
-body{
-min-height: 100vh;
+:root{
+  --ffM: 'Montserrat', sans-serif;
+  --ffR: 'Roboto', sans-serif;
+  min-height: 100vh;
 display:flex;
 flex-direction: column;
-font-family:"Roboto", "san-serif";
 }
+
 
 /* ------- Mobile SECTION  and main styling------- */
 
@@ -28,10 +30,7 @@ font-family:"Roboto", "san-serif";
   color:white;
   margin-top: auto;
 }
-/* .song {
-  border-radius: 5px;
-  box-shadow: 1px 1px 5px black;
-}  */
+
 video{
   border-radius: 100px;
 width: 100%;
@@ -89,15 +88,18 @@ font-weight: bold;
 text-decoration: none;
 color: #333;
 }
+.infoName{
+  --ffM: 'Montserrat', sans-serif;
+}
 .infoSite{
   padding:1em;
+  --ffR: 'Roboto', sans-serif;
+
 }.infoLevel{
   padding:1px;
 }.infoLife{
-  text-align: center;
-  font-weight: bold;
-  margin: auto;
   padding: 1em;
+  --ffR: 'Roboto', sans-serif;
 }
 
 .text-left{

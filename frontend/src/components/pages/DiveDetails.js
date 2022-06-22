@@ -43,20 +43,20 @@ const DiveDetails = () => {
             Dive site {''}
             {dive.name}
           </h2>
-          <p className="infoLevel">
+          <h3 className="infoLevel">
             Experience {''}
             {dive.level}
-          </p>
+          </h3>
           <p className="infoSite">{dive.info1}</p>
-          <p className="infoSite">{dive.infotwo}</p>
-          <p className="infoSite">{dive.info}</p>
+          <p className="infoSite">{dive.info2}</p>
+          <p className="infoSite">{dive.info3}</p>
           <p className="infodepth">Depth is between{dive.deapth}</p>
           <p className="infovizz">
             On an average day the visibility is between {dive.visibility}
           </p>
         </div>
         <div className="lowerinfo">
-          <p> Everyday animal life on this location </p>
+          <h3 className="infoLevel"> Everyday animal life on this location </h3>
           <p className="infoLife">{dive.marineLife}</p>
           <Slider slides={imges} />
           <Link to="/" className="backLink">

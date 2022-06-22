@@ -4,13 +4,13 @@
   box-sizing: border-box;
 }
 :root{
-  --ffM: 'Montserrat', sans-serif;
-  --ffR: 'Roboto', sans-serif;
-  min-height: 100vh;
+--ffM: 'Montserrat', sans-serif;
+--ffR: 'Roboto', sans-serif;
+min-height: 100vh;
 display:flex;
 flex-direction: column;
+font-size: 16px;
 }
-
 
 /* ------- Mobile SECTION  and main styling------- */
 
@@ -74,11 +74,6 @@ display:block;
   justify-content: space-evenly;
   text-align: center;
 }
-.infoName{
-  font-weight: 500;
-  margin: auto;
-  padding: 1px;
-}
 .backLink{
 margin: auto;
 display: inline-flex;
@@ -92,27 +87,25 @@ color: #333;
   --ffM: 'Montserrat', sans-serif;
 }
 .infoSite{
-  padding:1em;
+line-height: 1.6em;
   --ffR: 'Roboto', sans-serif;
 
-}.infoLevel{
-  padding:1px;
 }.infoLife{
   padding: 1em;
   --ffR: 'Roboto', sans-serif;
 }
-
+/* 
 .text-left{
   text-align: center;
   padding:1em;
-}
+} */
 .main-container{  
   width:100%;
   padding:1em;
-    display: flex;
-    flex-direction: column;
-    gap:1em;
-    align-items: center;  
+  display: flex;
+  flex-direction: column;
+  gap:1em;
+  align-items: center;  
 }
 .inner-container{
   width:80%;
@@ -145,23 +138,14 @@ color: #333;
 .footer-text{
   color:white;
 }
-.image{
-  width:350px;
-  margin:auto;
-}
+
 /* Tablets */
 
 @media screen and (min-width: 768px) {
 
-.infoLife{
-  padding: 2em;
+  .backLink {
+    padding: 1.5em;
 }
-.image{
-  width:650px;
-}
-.backLink{
-  padding:1em;
-  }
 }
 /* BigScreen */
 
@@ -179,6 +163,8 @@ color: #333;
 
       background: #333;
       padding: 0px;
-    
+    }
+    .infoLife{
+      padding:2em;
     }
 }

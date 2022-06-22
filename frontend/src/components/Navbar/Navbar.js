@@ -29,6 +29,7 @@ const Navbar = () => {
       <Link to="/" className="site-title">
         <p className="title">🦈</p>
       </Link>
+      <hr className="horizontal-line" />
       <li className="toggle-button" onClick={handleClick}>
         <span className="bar"></span>
         <span className="bar"></span>

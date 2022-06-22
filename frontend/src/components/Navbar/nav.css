@@ -5,6 +5,11 @@
    background-color:#333;
    color:white;
    }
+   .horizontal-line {
+    width: 90%;
+    border-top: 1px solid var(--ffName);
+    opacity: 0.5;
+  }
    .nav-links{
      text-align: center;
      width: 100%;
@@ -60,7 +65,7 @@
       display:none;
     }
     .nav{
-      flex-direction: row;
+      align-items: center;
     }
     .nav-links{
       padding:2em;
@@ -73,6 +78,6 @@
       flex-direction: row;
     }
     .nav-links li {
-      font-size: 16px;
+      margin: auto;
  }
 }

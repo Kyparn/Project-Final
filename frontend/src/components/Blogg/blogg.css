@@ -15,15 +15,16 @@
     align-items: center;
   }
   .post-container{
-    color:white;
+    color: black;
+    background: white;
     font-family: var(--ffM);
     padding: 1em;
     margin: 1em auto;
     display: flex;
     flex-direction: column;
-    border-radius: 1em;
+    border-radius: 2px 6px 1em;
     justify-content: left;
-    box-shadow: 6px 6px 1px 1px rgb(5 5 5 / 90%);
+    box-shadow: 2px 2px 1px 1px rgb(5 5 5 / 90%);
   }
   
   .text-blogg{

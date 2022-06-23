@@ -27,6 +27,10 @@
   }
 
 .login-container{
+  background-image: url(https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/iStock_000019745738Medium_0-772x579.jpg);
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  min-height: 100vh;
     padding: 5em;
   display: flex;
   flex-direction: column;

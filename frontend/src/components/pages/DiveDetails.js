@@ -16,10 +16,7 @@ const DiveDetails = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data) {
-          console.log(data)
-
           setImges([])
-
           setDive(data.response)
           data.response.img.map((singleimge) => {
             setImges((oldImgs) => [...oldImgs, { image: singleimge }])

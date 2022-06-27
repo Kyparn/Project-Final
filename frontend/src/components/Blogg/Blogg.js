@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import Form from './Form'
-import { BLOGG_URL, LIKES_URL } from '../utils/API'
+import { BLOGG_URL } from '../utils/API'
 import BloggCard from './BloggCard'
 import './blogg.css'
 
@@ -21,16 +21,6 @@ const Blogg = () => {
         setLoading(false)
       })
   }
-  const handleAddedLikes = (id) => {
-    const options = {
-      method: 'post',
-    }
-    fetch(LIKES_URL(id), options)
-      .then((res) => res.json())
-      .then(() => {
-        fetchBlogg()
-      })
-  }
   if (loading) {
     return <h1>Loading...</h1>
   }
@@ -40,7 +30,7 @@ const Blogg = () => {
       {blogg.map((blogg) => (
         <div key={blogg._id}>
           {' '}
-          <BloggCard blogg={blogg} handleAddedLikes={handleAddedLikes} />
+          <BloggCard blogg={blogg} />
         </div>
       ))}
     </section>

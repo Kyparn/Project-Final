@@ -136,15 +136,29 @@ const BloggSchema = new mongoose.Schema({
   },
   createdAt: {
     type: Date,
-    default: Date.now,
+    default: () => new Date(),
   },
 })
 
 const Blogg = mongoose.model('Blogg', BloggSchema)
 
+// app.get('/blogg', async (req, res) => {
+//   const blogg = await Blogg.find().sort({ createAt: 'desc' }).limit(20).exec()
+//   res.json(blogg)
+// })
 app.get('/blogg', async (req, res) => {
-  const blogg = await Blogg.find().sort({ createAt: 'desc' }).limit(20).exec()
-  res.json(blogg)
+  try {
+    const blogg = await Blogg.find({})
+      .sort({ createdAt: 'desc' })
+      .limit(25)
+      .exec()
+    res.status(200).json(blogg)
+  } catch (error) {
+    res.status(400).json({
+      response: error,
+      success: false,
+    })
+  }
 })
 
 app.post('/blogg', async (req, res) => {

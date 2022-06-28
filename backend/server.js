@@ -143,10 +143,7 @@ const BloggSchema = new mongoose.Schema({
 const Blogg = mongoose.model('Blogg', BloggSchema)
 
 app.get('/blogg', async (req, res) => {
-  const blogg = await Blogg.findOneAndUpdate()
-    .sort({ createAt: 'desc' })
-    .limit(20)
-    .exec()
+  const blogg = await Blogg.find().sort({ createAt: 'desc' }).limit(20).exec()
   res.json(blogg)
 })
 

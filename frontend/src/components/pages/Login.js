@@ -75,14 +75,18 @@ const Login = () => {
                 onChange={() => setMode('login')}
               />
             </div>
-            <label htmlFor="username">Username</label>
+            <label className="message" htmlFor="username">
+              Username
+            </label>
             <input
               type="text"
               id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
-            <label htmlFor="password">Password</label>
+            <label className="message" htmlFor="password">
+              Password
+            </label>
             <input
               type="password"
               id="password"

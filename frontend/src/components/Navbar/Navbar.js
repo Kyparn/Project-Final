@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 
 import './nav.css'
 
@@ -25,6 +28,15 @@ const Navbar = () => {
   const handleClick = () => {
     setClick(!click)
   }
+  const accessToken = useSelector((store) => store.user.accessToken)
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+
+  // useEffect(() => {
+  //   if (!accessToken) {
+  //     navigate('/login')
+  //   }
+  // }, [accessToken])
 
   return (
     <nav className="nav">
@@ -48,7 +60,16 @@ const Navbar = () => {
             <Link to="/login">
               Blogg {''}/ {''}
             </Link>
-            <Link to="/"> Logga ut</Link>
+            <Link
+              onClick={() => {
+                navigate('/')
+                dispatch(user.actions.setAccessToken(null))
+              }}
+              to="/"
+            >
+              {' '}
+              Logga ut
+            </Link>
           </li>
         </ul>
       </div>

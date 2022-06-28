@@ -4,7 +4,7 @@ import { BLOGG_URL } from '../utils/API'
 import './blogg.css'
 
 const Form = ({ blogg, setBlogg }) => {
-  const [newBlogg, setNewBlogg] = useState('')
+  const [newBlogg, setNewBlogg] = useState([])
   const [counter, setCounter] = useState(0)
 
   const newBloggChange = (e) => {

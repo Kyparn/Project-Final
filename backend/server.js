@@ -146,7 +146,7 @@ app.get('/blogg', async (req, res) => {
   try {
     const blogg = await Blogg.find({})
       .sort({ createdAt: 'desc' })
-      .limit(25)
+      .limit(30)
       .exec()
     res.status(200).json(blogg)
   } catch (error) {

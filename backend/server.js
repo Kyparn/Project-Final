@@ -134,9 +134,12 @@ const BloggSchema = new mongoose.Schema({
     maxlength: 140,
     required: true,
   },
-  createdAt: {
-    type: Date,
-    default: Date.now,
+  createAt: {
+    type: String,
+    default: () =>
+      new Date(Date.now()).toLocaleString('sv-SE', {
+        timeZone: 'Europe/Stockholm',
+      }),
   },
 })
 

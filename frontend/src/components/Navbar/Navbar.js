@@ -32,11 +32,11 @@ const Navbar = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
-  // useEffect(() => {
-  //   if (!accessToken) {
-  //     navigate('/login')
-  //   }
-  // }, [accessToken])
+  useEffect(() => {
+    if (!accessToken) {
+      navigate('/')
+    }
+  }, [accessToken])
 
   return (
     <nav className="nav">

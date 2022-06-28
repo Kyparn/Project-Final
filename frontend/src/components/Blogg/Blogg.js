@@ -28,10 +28,7 @@ const Blogg = () => {
     <section className="main-blogg-container">
       <Form setBlogg={setBlogg} blogg={blogg} />
       {blogg.map((blogg) => (
-        <div key={blogg._id}>
-          {' '}
-          <BloggCard blogg={blogg} />
-        </div>
+        <BloggCard key={blogg._id} blogg={blogg} />
       ))}
     </section>
   )

@@ -76,6 +76,7 @@ text-decoration: none;
 color: #333;
 }
 .info{
+  font-size: 1em;
   font-family: var(--ffR);
 }
 .infoSite{

@@ -7,10 +7,8 @@ import './blogg.css'
 
 const Blogg = () => {
   const [blogg, setBlogg] = useState([])
-  // const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    // setLoading(true)
     fetchBlogg()
   }, [blogg])
   const fetchBlogg = () => {
@@ -18,12 +16,9 @@ const Blogg = () => {
       .then((res) => res.json())
       .then((data) => {
         setBlogg(data)
-        // setLoading(false)
       })
   }
-  // if (loading) {
-  //   return <h1>Loading...</h1>
-  // }
+
   return (
     <section className="main-blogg-container">
       <Form setBlogg={setBlogg} blogg={blogg} />

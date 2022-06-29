@@ -54,7 +54,7 @@ app.post('/register', async (req, res) => {
 
     if (password.length < 6) {
       res.status(400).json({
-        response: 'Password must be at least  characters long',
+        response: 'Password must be at least 6 characters long',
         success: false,
       })
     } else {

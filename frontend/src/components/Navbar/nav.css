@@ -18,9 +18,9 @@
      width: 100%;
    }
    .title{
-     font-size: 1em;
-     margin:0.5em;
-     font-family: var(--ffR);
+    font-size: 1em;
+    margin: 0.75em;
+    font-family: var(--ffR);
    }
    .nav a {
     color:white;

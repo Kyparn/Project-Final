@@ -41,7 +41,7 @@ const Navbar = () => {
   return (
     <nav className="nav">
       <Link to="/" className="site-title">
-        <p className="title">Andaman Sea</p>
+        <p className="title">Diving the Andaman Sea</p>
       </Link>
       <hr className="horizontal-line" />
       <li className="toggle-button" onClick={handleClick}>

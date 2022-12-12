@@ -50,7 +50,11 @@ display:block;
   align-items: center;
   color: white;
 }
-
+.loading{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
 .upperinfo{
   justify-items: center;
   display: grid;

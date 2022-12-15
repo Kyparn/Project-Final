@@ -51,7 +51,7 @@ app.post('/register', async (req, res) => {
 
   try {
     const salt = bcrypt.genSaltSync()
-    // asså
+
     if (password.length < 6) {
       res.status(400).json({
         response: 'Password must be at least 6 characters long',
